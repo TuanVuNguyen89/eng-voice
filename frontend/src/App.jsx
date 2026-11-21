@@ -215,7 +215,7 @@ function Workspace({ username, onLogout }) {
           {tab === 'practice' && (
             <PracticeView
               key={topic ? topic.id : 'none'}
-              defaultSentence={topic ? topic.sample : ''}
+              topic={topic}
               voiceName={prefs.voiceName}
               rate={prefs.rate}
             />

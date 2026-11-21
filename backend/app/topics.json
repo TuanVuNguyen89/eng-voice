@@ -4,7 +4,7 @@
     "name": "Daily routine",
     "icon": "☀️",
     "starter": "What does a typical morning look like for you?",
-    "sample": "I usually wake up at seven, have breakfast, and then head to work.",
+    "sample": "I usually wake up at seven and have a quick breakfast.",
     "words": [
       "routine",
       "commute",
@@ -16,6 +16,48 @@
       "What time do you usually get up?",
       "Do you prefer mornings or evenings? Why?",
       "What do you do during your commute?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "nguyên âm dài /iː/",
+        "text": "I usually wake up at seven and have a quick breakfast."
+      },
+      {
+        "level": 1,
+        "focus": "âm cuối /t/",
+        "text": "I catch the bus at eight thirty every morning."
+      },
+      {
+        "level": 1,
+        "focus": "trọng âm từ 'commute'",
+        "text": "My commute takes about forty minutes by train."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'the' và 'this'",
+        "text": "Before I leave, I always check the weather and grab my keys."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'get up'",
+        "text": "On weekdays I get up earlier than I do on weekends, but I rarely feel rested."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ trong 'think'",
+        "text": "I think a good routine makes the whole day feel more organized."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'strengths'",
+        "text": "Honestly, keeping a strict schedule sometimes drains my energy more than it helps."
+      },
+      {
+        "level": 3,
+        "focus": "âm /r/ và /l/",
+        "text": "Right after lunch, I usually recharge by reading a few pages of a novel."
+      }
     ]
   },
   {
@@ -23,7 +65,7 @@
     "name": "Food & cooking",
     "icon": "🍜",
     "starter": "What is your favorite dish, and how would you describe its taste?",
-    "sample": "My favorite dish is pho, because the broth is warm and full of flavor.",
+    "sample": "My favorite dish is pho, especially with extra herbs.",
     "words": [
       "recipe",
       "ingredient",
@@ -35,6 +77,48 @@
       "Do you enjoy cooking at home?",
       "What is the hardest dish you have ever made?",
       "Which restaurant would you recommend to a foreign friend?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /p/ bật hơi",
+        "text": "My favorite dish is pho, especially with extra herbs."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ʃ/ trong 'fish'",
+        "text": "I usually order fish soup when I eat out."
+      },
+      {
+        "level": 1,
+        "focus": "âm /tʃ/ trong 'chicken'",
+        "text": "Grilled chicken with rice is my go-to lunch."
+      },
+      {
+        "level": 2,
+        "focus": "âm /v/ và /w/",
+        "text": "We were very excited to try the new vegetarian restaurant downtown."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'cook at home'",
+        "text": "I enjoy cooking at home because I can control what goes into my food."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ɪ/ và /iː/ trong 'ship' và 'sheep'",
+        "text": "The seafood was fresh, and the shrimp tasted like it had just been caught."
+      },
+      {
+        "level": 3,
+        "focus": "trọng âm câu hỏi",
+        "text": "Would you rather have something spicy, or would you prefer a milder flavor tonight?"
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ và /ð/ trong 'thoroughly'",
+        "text": "I thoroughly enjoyed the smooth texture of the homemade soup."
+      }
     ]
   },
   {
@@ -42,7 +126,7 @@
     "name": "Travel",
     "icon": "✈️",
     "starter": "Where would you love to travel next, and why?",
-    "sample": "I would really like to visit Japan, because I am fascinated by its culture and food.",
+    "sample": "I would love to travel to Japan someday.",
     "words": [
       "itinerary",
       "destination",
@@ -54,6 +138,48 @@
       "Do you prefer traveling alone or with friends?",
       "What is the most memorable trip you have taken?",
       "How do you usually plan your trips?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /æ/ trong 'Japan'",
+        "text": "I would love to travel to Japan someday."
+      },
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'time'",
+        "text": "This is my first time visiting a foreign country."
+      },
+      {
+        "level": 1,
+        "focus": "trọng âm 'passport'",
+        "text": "Please don't forget your passport when you check in."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ŋ/ cuối từ 'long'",
+        "text": "The flight was long, but the views from the window were worth it."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'turn off'",
+        "text": "Before we land, the crew will ask everyone to turn off their phones."
+      },
+      {
+        "level": 2,
+        "focus": "âm /s/ và /z/ trong 'sees' và 'seas'",
+        "text": "From the hotel room, you can see the sea and the old town at sunset."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'sixth'",
+        "text": "We spent the sixth day exploring hidden streets and tiny family-run cafés."
+      },
+      {
+        "level": 3,
+        "focus": "trọng âm 'accommodation'",
+        "text": "We found affordable accommodation close to the city center, which saved us a lot of time."
+      }
     ]
   },
   {
@@ -61,7 +187,7 @@
     "name": "Work & career",
     "icon": "💼",
     "starter": "What do you do for work, and what do you enjoy most about it?",
-    "sample": "I work as a designer, and I enjoy solving problems creatively with my team.",
+    "sample": "I work as an accountant at a small company.",
     "words": [
       "colleague",
       "deadline",
@@ -73,6 +199,48 @@
       "How do you handle a tight deadline?",
       "Which skills matter most in your job?",
       "Would you like to change careers someday?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ɜː/ trong 'work'",
+        "text": "I work as an accountant at a small company."
+      },
+      {
+        "level": 1,
+        "focus": "âm /dʒ/ trong 'job'",
+        "text": "My job is busy, but I enjoy it."
+      },
+      {
+        "level": 1,
+        "focus": "trọng âm 'colleague'",
+        "text": "My colleagues are friendly and always willing to help."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'they' và 'other'",
+        "text": "They asked me to lead the project because I understand the other departments."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'set up'",
+        "text": "We set up a meeting every Monday to plan the week ahead."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ trong 'thing'",
+        "text": "The most important thing is to meet the deadline without sacrificing quality."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'projects'",
+        "text": "Although the projects were demanding, the team managed to finish them on schedule."
+      },
+      {
+        "level": 3,
+        "focus": "âm /r/ trong 'responsibility'",
+        "text": "Taking responsibility for mistakes is something I really respect in a leader."
+      }
     ]
   },
   {
@@ -80,7 +248,7 @@
     "name": "Job interview",
     "icon": "🎤",
     "starter": "Tell me a little about yourself and why you want this job.",
-    "sample": "I have three years of experience in marketing, and I am excited about this opportunity.",
+    "sample": "I like solving problems and working with people.",
     "words": [
       "experience",
       "strengths",
@@ -92,6 +260,48 @@
       "What is your greatest strength?",
       "Can you describe a challenge you overcame at work?",
       "Where do you see yourself in three years?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'I' và 'like'",
+        "text": "I like solving problems and working with people."
+      },
+      {
+        "level": 1,
+        "focus": "trọng âm 'experience'",
+        "text": "I have three years of experience in customer service."
+      },
+      {
+        "level": 1,
+        "focus": "âm /w/ trong 'why'",
+        "text": "Why do you want to work for our company?"
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'look forward to'",
+        "text": "I look forward to contributing to a team that values innovation."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ʌ/ trong 'strength'",
+        "text": "One of my greatest strengths is staying calm under pressure."
+      },
+      {
+        "level": 2,
+        "focus": "âm /v/ và /b/ trong 'very' và 'berry'",
+        "text": "I have worked on several projects that required very careful planning."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'achievement'",
+        "text": "My biggest achievement was improving our team's productivity by twenty percent in one year."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ɪ/ 'development'",
+        "text": "I believe continuous development is essential if I want to grow in this role."
+      }
     ]
   },
   {
@@ -99,7 +309,7 @@
     "name": "Ordering food",
     "icon": "🍽️",
     "starter": "Hi, welcome! Are you ready to order, or do you need a few more minutes?",
-    "sample": "Could I see the menu, please? I would like the grilled chicken, and a glass of water.",
+    "sample": "Could I see the menu, please?",
     "words": [
       "menu",
       "appetizer",
@@ -111,6 +321,48 @@
       "Do you have any food allergies I should know about?",
       "Would you like something to drink with your meal?",
       "Would you like to see the dessert menu?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /m/ và /n/",
+        "text": "Could I see the menu, please?"
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɔː/ trong 'order'",
+        "text": "I'd like to order the grilled salmon, please."
+      },
+      {
+        "level": 1,
+        "focus": "âm /k/ trong 'coffee'",
+        "text": "Could I have a cup of coffee with no sugar?"
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'a glass of'",
+        "text": "Could I get a glass of water and a side of fries, please?"
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ trong 'through'",
+        "text": "Does this dish come with vegetables or is it served through a separate plate?"
+      },
+      {
+        "level": 2,
+        "focus": "âm câu hỏi lên giọng",
+        "text": "Is the soup spicy, or is it mild enough for children?"
+      },
+      {
+        "level": 3,
+        "focus": "trọng âm 'recommend'",
+        "text": "Could you recommend something light that isn't too heavy for lunch?"
+      },
+      {
+        "level": 3,
+        "focus": "âm /ŋ/ 'ordering'",
+        "text": "We're still deciding, so we'll let you know when we're ready to start ordering."
+      }
     ]
   },
   {
@@ -118,7 +370,7 @@
     "name": "Asking directions",
     "icon": "🗺️",
     "starter": "Excuse me, could you tell me how to get to the nearest train station?",
-    "sample": "Go straight for two blocks, then turn left. It is across from the bank.",
+    "sample": "Thank you so much for your help.",
     "words": [
       "turn left",
       "straight ahead",
@@ -130,6 +382,48 @@
       "Is it far, or can I walk there?",
       "Do you know any landmarks near the station?",
       "Have you ever gotten lost in a foreign city?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /θ/ trong 'thank'",
+        "text": "Thank you so much for your help."
+      },
+      {
+        "level": 1,
+        "focus": "âm /n/ trong 'next'",
+        "text": "The station is next to the bank."
+      },
+      {
+        "level": 1,
+        "focus": "âm /tʃ/ trong 'church'",
+        "text": "Turn left at the church and keep walking straight."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'turn around'",
+        "text": "If you go past the bridge, you'll need to turn around and come back."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ɪ/ trong 'across from'",
+        "text": "The café is across from the park, on the corner."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'directions'",
+        "text": "Could you give me directions to the nearest subway station?"
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'straight'",
+        "text": "Go straight ahead for about three blocks, then the entrance is on your right."
+      },
+      {
+        "level": 3,
+        "focus": "âm /w/ và /r/ trong 'right' và 'wrong'",
+        "text": "I think I'm going the wrong way, so I'd like to check the right route on the map."
+      }
     ]
   },
   {
@@ -137,7 +431,7 @@
     "name": "At the doctor",
     "icon": "🩺",
     "starter": "Hello, what seems to be the problem today?",
-    "sample": "I have had a headache and a slight fever since yesterday.",
+    "sample": "I have a headache and I feel tired.",
     "words": [
       "symptom",
       "fever",
@@ -149,6 +443,48 @@
       "How long have you felt this way?",
       "Have you taken any medicine yet?",
       "Are you allergic to any medication?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /h/ trong 'headache'",
+        "text": "I have a headache and I feel tired."
+      },
+      {
+        "level": 1,
+        "focus": "âm /f/ trong 'fever'",
+        "text": "I've had a fever since last night."
+      },
+      {
+        "level": 1,
+        "focus": "trọng âm 'appointment'",
+        "text": "I'd like to make an appointment for next Tuesday."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ʃ/ trong 'should'",
+        "text": "Should I take this medicine before or after meals?"
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'in the morning'",
+        "text": "The pain gets worse in the morning, and sometimes it lasts all day."
+      },
+      {
+        "level": 2,
+        "focus": "âm cuối /d/ và /t/ trong 'tired' và 'tide'",
+        "text": "I've been feeling tired for about two weeks, and I can't sleep well."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'prescription'",
+        "text": "Could you write me a prescription, and let me know how often I should take the tablets?"
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ 'month'",
+        "text": "It's been on and off for a month, and it seems to get worse when I stand up."
+      }
     ]
   },
   {
@@ -156,7 +492,7 @@
     "name": "Shopping",
     "icon": "🛍️",
     "starter": "Do you prefer shopping online or in physical stores? Why?",
-    "sample": "I usually shop online because it saves time and I can compare prices easily.",
+    "sample": "I usually shop on weekends.",
     "words": [
       "discount",
       "receipt",
@@ -168,6 +504,48 @@
       "Have you ever returned something you bought?",
       "How do you decide if something is worth the price?",
       "Do you enjoy looking for bargains?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ʃ/ trong 'shop'",
+        "text": "I usually shop on weekends."
+      },
+      {
+        "level": 1,
+        "focus": "âm /aʊ/ trong 'brown'",
+        "text": "Do you have this shirt in brown?"
+      },
+      {
+        "level": 1,
+        "focus": "trọng âm 'receipt'",
+        "text": "Can I have a receipt, please?"
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'try it on'",
+        "text": "Can I try it on before I decide to buy it?"
+      },
+      {
+        "level": 2,
+        "focus": "âm /ɪ/ 'discount'",
+        "text": "Is there a discount if I buy two of these?"
+      },
+      {
+        "level": 2,
+        "focus": "âm /æ/ trong 'bag' và 'back'",
+        "text": "I'd like a bag to carry these back home."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'refund'",
+        "text": "If the size doesn't fit, can I get a refund or exchange it for a different one?"
+      },
+      {
+        "level": 3,
+        "focus": "âm /ə/ trong 'comfortable'",
+        "text": "I'm looking for something comfortable but still stylish for everyday wear."
+      }
     ]
   },
   {
@@ -175,7 +553,7 @@
     "name": "Hobbies",
     "icon": "🎨",
     "starter": "What do you like to do in your free time?",
-    "sample": "In my free time, I enjoy reading novels and going for long walks.",
+    "sample": "My hobby is painting, and I paint on weekends.",
     "words": [
       "hobby",
       "relax",
@@ -187,6 +565,48 @@
       "How did you first get into that hobby?",
       "Would you like to try a new hobby this year?",
       "Do you prefer hobbies you do alone or with others?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /h/ trong 'hobby'",
+        "text": "My hobby is painting, and I paint on weekends."
+      },
+      {
+        "level": 1,
+        "focus": "âm /iː/ 'free time'",
+        "text": "In my free time, I like to read and take long walks."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɒ/ trong 'hobby'",
+        "text": "I'm not very good, but I really enjoy it."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'take up'",
+        "text": "I've recently taken up photography, so I go out early to find good light."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ɜː/ trong 'learn'",
+        "text": "I'd like to learn to play the guitar, but I need more time to practice."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ 'theater'",
+        "text": "I go to the theater once a month with my friends."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'sculpture'",
+        "text": "Last year I started a pottery class, and now I make small sculptures for my family."
+      },
+      {
+        "level": 3,
+        "focus": "trọng âm 'collection'",
+        "text": "I started a stamp collection as a child, and I still add new pieces whenever I travel."
+      }
     ]
   },
   {
@@ -194,7 +614,7 @@
     "name": "Movies & TV",
     "icon": "🎬",
     "starter": "What is the last movie or show you really enjoyed?",
-    "sample": "I recently watched a documentary about the ocean, and it was truly breathtaking.",
+    "sample": "I watched a movie last night, and it was great.",
     "words": [
       "plot",
       "character",
@@ -206,6 +626,48 @@
       "Who is your favorite actor, and why?",
       "Would you recommend that movie to me?",
       "Do you watch movies in theaters or at home?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ɔː/ trong 'more'",
+        "text": "I watched a movie last night, and it was great."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'film'",
+        "text": "My favorite film is a comedy about a family road trip."
+      },
+      {
+        "level": 1,
+        "focus": "âm /tʃ/ trong 'character'",
+        "text": "The main character is funny and very kind."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'end up'",
+        "text": "The ending was surprising, and I didn't expect the story to end up like that."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ʒ/ trong 'vision'",
+        "text": "The visual effects were amazing, and the music fit every scene perfectly."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'recommend'",
+        "text": "Would you recommend this series to someone who likes thrillers?"
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'thoughtful'",
+        "text": "It's a thoughtful drama that makes you reflect on relationships long after the credits roll."
+      },
+      {
+        "level": 3,
+        "focus": "âm /r/ và /l/ trong 'really' và 'lovely'",
+        "text": "The soundtrack was really lovely, and the lead actor delivered a brilliant performance."
+      }
     ]
   },
   {
@@ -213,7 +675,7 @@
     "name": "Music",
     "icon": "🎵",
     "starter": "What kind of music do you listen to when you study or relax?",
-    "sample": "When I study, I usually listen to calm instrumental music.",
+    "sample": "I listen to music every morning.",
     "words": [
       "genre",
       "lyrics",
@@ -225,6 +687,48 @@
       "Have you ever been to a live concert?",
       "Do you have a favorite song right now?",
       "Can you play any musical instrument?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /m/ trong 'music'",
+        "text": "I listen to music every morning."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'lyrics'",
+        "text": "I like songs with simple and honest lyrics."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ə/ trong 'concert'",
+        "text": "I went to a concert last summer."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'listen to'",
+        "text": "When I'm studying, I listen to instrumental music to stay focused."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ và /s/ trong 'thrill' và 'sill'",
+        "text": "The live performance gave me a real thrill, and the crowd sang along."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'playlist'",
+        "text": "I made a playlist for my road trip, with a mix of old and new songs."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'rhythm'",
+        "text": "Her rhythm and melody are so powerful that they stay in your head for days."
+      },
+      {
+        "level": 3,
+        "focus": "âm /v/ và /w/ trong 'vocal' và 'wonderful'",
+        "text": "Her vocal range is wonderful, and every note sounds effortless."
+      }
     ]
   },
   {
@@ -232,7 +736,7 @@
     "name": "Sports & fitness",
     "icon": "⚽",
     "starter": "Do you play any sports, or do you exercise regularly?",
-    "sample": "I try to go running three times a week to stay healthy and keep my energy up.",
+    "sample": "I play sports on weekends.",
     "words": [
       "workout",
       "team",
@@ -244,6 +748,48 @@
       "Do you prefer team sports or individual sports?",
       "Who is your favorite athlete?",
       "What is a good workout for a beginner?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ɒ/ trong 'sport'",
+        "text": "I play sports on weekends."
+      },
+      {
+        "level": 1,
+        "focus": "âm /r/ trong 'run'",
+        "text": "I run in the park three times a week."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'fit'",
+        "text": "Exercise keeps me fit and gives me more energy."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'work out'",
+        "text": "I usually work out in the morning before I start my day."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'together'",
+        "text": "We play soccer together every Sunday, and it's always a lot of fun."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'competition'",
+        "text": "Did you watch the competition last night? The final match was intense."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'strength'",
+        "text": "Building strength and flexibility takes patience, but the results are worth the effort."
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ và /f/ trong 'three' và 'free'",
+        "text": "I train three days a week and try to keep one day free for stretching and recovery."
+      }
     ]
   },
   {
@@ -251,7 +797,7 @@
     "name": "Technology",
     "icon": "💻",
     "starter": "How has technology changed the way you live or work?",
-    "sample": "Smartphones have made it much easier to stay in touch with my family.",
+    "sample": "I use my phone for almost everything.",
     "words": [
       "device",
       "app",
@@ -263,6 +809,48 @@
       "Do we spend too much time on our phones?",
       "What app do you use every day?",
       "How do you protect your personal information online?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'phone'",
+        "text": "I use my phone for almost everything."
+      },
+      {
+        "level": 1,
+        "focus": "âm /æ/ trong 'app'",
+        "text": "This app helps me learn new words every day."
+      },
+      {
+        "level": 1,
+        "focus": "âm /uː/ trong 'update'",
+        "text": "I need to update my software before I can open the file."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'turn on'",
+        "text": "Please turn on the Wi-Fi so I can check my email."
+      },
+      {
+        "level": 2,
+        "focus": "âm /p/ và /b/ trong 'privacy' và 'bite'",
+        "text": "I'm careful about privacy, so I never share my password with anyone."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'internet'",
+        "text": "The internet connection is slow today, so I'll try again later."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'technology'",
+        "text": "Technology has changed the way we communicate, but it can also make us feel more isolated."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ɪ/ 'device' và 'digital'",
+        "text": "Digital devices have made learning easier, but I try to limit my screen time before bed."
+      }
     ]
   },
   {
@@ -270,7 +858,7 @@
     "name": "Future plans",
     "icon": "🚀",
     "starter": "Where do you see yourself in five years?",
-    "sample": "In five years, I hope to be leading my own team and learning a new language.",
+    "sample": "I will study hard this year.",
     "words": [
       "goal",
       "plan",
@@ -282,6 +870,48 @@
       "What goal are you working toward right now?",
       "What would you like to improve about yourself?",
       "Would you like to live abroad someday?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /w/ trong 'will'",
+        "text": "I will study hard this year."
+      },
+      {
+        "level": 1,
+        "focus": "âm /g/ trong 'goal'",
+        "text": "My goal is to speak English more confidently."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ 'plan'",
+        "text": "I plan to travel abroad next summer."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'look forward to'",
+        "text": "I'm looking forward to starting a new job in another city."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ 'think'",
+        "text": "I think I'll have more opportunities if I improve my English."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'opportunity'",
+        "text": "I hope to take this opportunity to grow both personally and professionally."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'successful'",
+        "text": "In five years, I hope to be a successful manager who inspires my team."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ʒ/ 'pleasure'",
+        "text": "It would be a pleasure to help others achieve their dreams while I pursue mine."
+      }
     ]
   },
   {
@@ -289,7 +919,7 @@
     "name": "Small talk",
     "icon": "☕",
     "starter": "Hi there! How has your week been so far?",
-    "sample": "It has been busy, but I am glad the weekend is finally here.",
+    "sample": "How are you doing today?",
     "words": [
       "busy",
       "catch up",
@@ -301,6 +931,48 @@
       "Do you have any plans for the weekend?",
       "How is the weather where you live today?",
       "We should catch up over coffee sometime. Are you free?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /h/ trong 'how'",
+        "text": "How are you doing today?"
+      },
+      {
+        "level": 1,
+        "focus": "âm /aʊ/ trong 'how' và 'now'",
+        "text": "I'm doing well, thanks for asking."
+      },
+      {
+        "level": 1,
+        "focus": "âm /w/ trong 'weekend'",
+        "text": "What are your plans for the weekend?"
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'catch up'",
+        "text": "It's been ages! Let's catch up over coffee sometime."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ɔː/ trong 'forward'",
+        "text": "Of course, I'd love to join you if I'm free that day."
+      },
+      {
+        "level": 2,
+        "focus": "âm cuối /t/ trong 'thought'",
+        "text": "I've been thinking about starting a new hobby, but I haven't decided yet."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'strengths'",
+        "text": "Honestly, I'm glad the week is over, though I'm not sure how I'll rest properly."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ð/ và /θ/ trong 'other' và 'author'",
+        "text": "Have you read anything good lately? My sister keeps recommending the same author to me."
+      }
     ]
   },
   {
@@ -308,7 +980,7 @@
     "name": "Family & friends",
     "icon": "👨‍👩‍👧",
     "starter": "Tell me about your family. Who do you live with?",
-    "sample": "I live with my parents and my younger brother, and we usually have dinner together.",
+    "sample": "I live with my family in a small house.",
     "words": [
       "relatives",
       "grandparents",
@@ -320,6 +992,48 @@
       "What do you usually do together on weekends?",
       "Do you have a family tradition you really enjoy?",
       "How often do you keep in touch with your friends?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /f/ trong 'family'",
+        "text": "I live with my family in a small house."
+      },
+      {
+        "level": 1,
+        "focus": "âm /m/ trong 'mother'",
+        "text": "My mother is a kind and patient teacher."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'brother'",
+        "text": "I have one older brother and two younger sisters."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'get along'",
+        "text": "My parents and I get along well, and we talk every week."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'father' và 'together'",
+        "text": "On Sundays, my whole family gathers together for a big lunch."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'relatives'",
+        "text": "Many of my relatives live in other cities, so we see each other during holidays."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'grandparents'",
+        "text": "My grandparents taught me the value of patience, and I still remember their stories."
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ trong 'nothing' và 'something'",
+        "text": "Nothing makes me happier than hearing my family laugh together at the dinner table."
+      }
     ]
   },
   {
@@ -327,7 +1041,7 @@
     "name": "Weather & seasons",
     "icon": "⛅",
     "starter": "What is the weather like where you live today?",
-    "sample": "It is quite hot and humid in the afternoon, but it cools down in the evening.",
+    "sample": "It's sunny today, so I'm going to the park.",
     "words": [
       "humid",
       "forecast",
@@ -339,6 +1053,48 @@
       "Which season do you like the most, and why?",
       "Do you check the weather forecast every day?",
       "How does the weather affect your mood?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'it'",
+        "text": "It's sunny today, so I'm going to the park."
+      },
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'rain'",
+        "text": "It's raining, so I'll take an umbrella."
+      },
+      {
+        "level": 1,
+        "focus": "âm /w/ trong 'windy'",
+        "text": "It's very windy outside, so please wear a warm jacket."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'turn cold'",
+        "text": "The weather is going to turn cold tonight, so bring a sweater."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ʌ/ trong 'humid'",
+        "text": "The air is so humid in the afternoon that I can barely breathe."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'forecast'",
+        "text": "According to the forecast, it will be cloudy with light showers this evening."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'thunderstorm'",
+        "text": "We had a thunderstorm last night, and the power went out for about an hour."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ɜː/ trong 'stormy' và 'early'",
+        "text": "I prefer spring weather, but I'm getting used to the stormy summers here."
+      }
     ]
   },
   {
@@ -346,7 +1102,7 @@
     "name": "Environment",
     "icon": "🌱",
     "starter": "What can people do to protect the environment in daily life?",
-    "sample": "I try to recycle plastic bottles and turn off the lights when I leave a room.",
+    "sample": "I recycle plastic bottles every week.",
     "words": [
       "recycle",
       "pollution",
@@ -358,6 +1114,48 @@
       "Should governments or individuals do more?",
       "Have you noticed changes in your city air quality?",
       "Which habit would you like to change to help the planet?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /r/ trong 'recycle'",
+        "text": "I recycle plastic bottles every week."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ 'energy'",
+        "text": "I turn off the lights when I leave a room."
+      },
+      {
+        "level": 1,
+        "focus": "âm /æ/ trong 'plastic'",
+        "text": "Plastic bags are bad for the environment."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'turn off'",
+        "text": "Please turn off the air conditioner when you go out."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ɒ/ trong 'pollution'",
+        "text": "Air pollution has become a serious problem in many big cities."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'climate'",
+        "text": "Climate change affects everyone, so we all need to take responsibility."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'sustainable'",
+        "text": "Governments and businesses must invest in sustainable energy to reduce carbon emissions."
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ và /s/ trong 'thousands' và 'sustainable'",
+        "text": "Thousands of people joined the campaign to protect the forest and its wildlife."
+      }
     ]
   },
   {
@@ -365,7 +1163,7 @@
     "name": "Vietnamese culture",
     "icon": "🇻🇳",
     "starter": "How do people celebrate Tết in your family?",
-    "sample": "Every year, my family cleans the house and makes banh chung together before the New Year.",
+    "sample": "Tết is the most important holiday in Vietnam.",
     "words": [
       "festival",
       "tradition",
@@ -377,6 +1175,48 @@
       "What is your favorite food during Tết?",
       "Which tradition would foreigners find most interesting?",
       "How has the way people celebrate changed over the years?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ʊ/ trong 'good'",
+        "text": "Tết is the most important holiday in Vietnam."
+      },
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'lucky'",
+        "text": "Children receive lucky money during Tết."
+      },
+      {
+        "level": 1,
+        "focus": "âm /l/ trong 'family'",
+        "text": "Every year, my family cooks banh chung together."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'family reunion'",
+        "text": "We have a big family reunion, and everyone travels back home for Tết."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'they' và 'their'",
+        "text": "They clean the house before the New Year because they want a fresh start."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'tradition'",
+        "text": "It's a tradition to visit relatives and wish them good health."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'celebrate'",
+        "text": "We celebrate by sharing food, playing games, and telling stories about our ancestors."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ʃ/ và /tʃ/ trong 'fresh' và 'church'",
+        "text": "The streets are quiet, but the fresh flowers and decorations make the whole city feel alive."
+      }
     ]
   },
   {
@@ -384,7 +1224,7 @@
     "name": "Books & reading",
     "icon": "📚",
     "starter": "Do you enjoy reading? What have you read recently?",
-    "sample": "I read a few pages every night before bed, mostly short novels and biographies.",
+    "sample": "I read a book every week.",
     "words": [
       "novel",
       "author",
@@ -396,6 +1236,48 @@
       "Do you prefer paper books or e-books? Why?",
       "Is there a book that changed the way you think?",
       "Would you like to write a book someday?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ʊ/ trong 'book'",
+        "text": "I read a book every week."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɔː/ trong 'short'",
+        "text": "I like short stories because they're easy to finish."
+      },
+      {
+        "level": 1,
+        "focus": "âm /iː/ trong 'reading'",
+        "text": "Reading helps me relax before I go to sleep."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'picked up'",
+        "text": "I picked up this novel at the library, and I couldn't put it down."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ trong 'author'",
+        "text": "The author writes about history in a way that makes it feel alive."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'recommend'",
+        "text": "Could you recommend a good book about personal growth?"
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'biography'",
+        "text": "I'm reading a biography of an inventor, and it's fascinating how much perseverance she had."
+      },
+      {
+        "level": 3,
+        "focus": "âm /r/ và /l/ 'literature'",
+        "text": "Modern literature often explores how people struggle to understand their own identity."
+      }
     ]
   },
   {
@@ -403,7 +1285,7 @@
     "name": "Education & studying",
     "icon": "🎓",
     "starter": "What did you study at school or university, and why did you choose it?",
-    "sample": "I studied economics because I wanted to understand how businesses make decisions.",
+    "sample": "I learn new things every day.",
     "words": [
       "major",
       "degree",
@@ -415,6 +1297,48 @@
       "What is the best way for you to learn something new?",
       "Would you like to study abroad? Why or why not?",
       "What advice would you give to a student today?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ɜː/ trong 'learn'",
+        "text": "I learn new things every day."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'study'",
+        "text": "I study English for thirty minutes each morning."
+      },
+      {
+        "level": 1,
+        "focus": "âm /tʃ/ trong 'teacher'",
+        "text": "My teacher is very patient and encouraging."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'graduated from'",
+        "text": "I graduated from university in 2020 with a degree in engineering."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'they' và 'that'",
+        "text": "The exams were difficult, but they taught me how to manage my time."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'scholarship'",
+        "text": "I received a scholarship that helped me pay for my first year."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'knowledge'",
+        "text": "Good education gives people the knowledge and confidence to make their own decisions."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ʃ/ và /ʒ/ trong 'education' và 'confusion'",
+        "text": "Sometimes the explanations are confusing, but a good lecture can change how you think."
+      }
     ]
   },
   {
@@ -422,7 +1346,7 @@
     "name": "Childhood memories",
     "icon": "🧸",
     "starter": "What is one of your favorite memories from when you were a child?",
-    "sample": "When I was little, my grandmother used to take me to the market every Sunday.",
+    "sample": "I spent my childhood in a small village.",
     "words": [
       "childhood",
       "nostalgic",
@@ -434,6 +1358,48 @@
       "What games did you play as a kid?",
       "How has your hometown changed since then?",
       "What did you want to be when you grew up?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /tʃ/ trong 'childhood'",
+        "text": "I spent my childhood in a small village."
+      },
+      {
+        "level": 1,
+        "focus": "âm /æ/ trong 'happy'",
+        "text": "I was a happy child, and I loved playing outside."
+      },
+      {
+        "level": 1,
+        "focus": "âm /uː/ trong 'food'",
+        "text": "My grandmother cooked delicious food every Sunday."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'grew up'",
+        "text": "I grew up near a river, and we often swam there in the summer."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ɪ/ trong 'remember'",
+        "text": "I still remember the smell of the rice fields after the rain."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'neighborhood'",
+        "text": "Everyone in our neighborhood knew each other, and we looked out for one another."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'nostalgic'",
+        "text": "Thinking about those summers always makes me feel nostalgic and a little sentimental."
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ và /ð/ 'thoughtful' và 'together'",
+        "text": "My parents were thoughtful and kind, and they always made time for us together."
+      }
     ]
   },
   {
@@ -441,7 +1407,7 @@
     "name": "Social media",
     "icon": "📱",
     "starter": "How much time do you spend on social media, and how does it make you feel?",
-    "sample": "I spend about an hour a day scrolling, but I try to limit it before bed.",
+    "sample": "I use social media to keep in touch with friends.",
     "words": [
       "post",
       "follower",
@@ -453,6 +1419,48 @@
       "Do you think social media is more helpful or harmful?",
       "Have you ever taken a break from social media?",
       "What kind of content do you enjoy watching online?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /s/ trong 'social'",
+        "text": "I use social media to keep in touch with friends."
+      },
+      {
+        "level": 1,
+        "focus": "âm /æ/ trong 'app'",
+        "text": "I post photos of my trips on this app."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'phone'",
+        "text": "I spend too much time on my phone."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'scroll through'",
+        "text": "I sometimes scroll through my feed for hours without noticing."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'them' và 'they'",
+        "text": "Some people feel pressure to share everything, but I think they should relax."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'addictive'",
+        "text": "Social media can be addictive, so I set a limit each day."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'influence'",
+        "text": "Online influencers can shape what people buy, what they wear, and even how they think."
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ và /f/ trong 'truth' và 'fact'",
+        "text": "It's important to check the truth before you share a post, because misinformation spreads quickly."
+      }
     ]
   },
   {
@@ -460,7 +1468,7 @@
     "name": "City vs countryside",
     "icon": "🏙️",
     "starter": "Would you rather live in a busy city or in the countryside? Why?",
-    "sample": "I would prefer to live in a city, because there are more jobs and things to do.",
+    "sample": "I live in a big city.",
     "words": [
       "downtown",
       "suburbs",
@@ -472,6 +1480,48 @@
       "What do you miss most about your hometown?",
       "How do you deal with traffic in your city?",
       "What would make your city a better place to live?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /s/ trong 'city'",
+        "text": "I live in a big city."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'busy'",
+        "text": "The streets are busy, but I like the energy."
+      },
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'quiet'",
+        "text": "I prefer a quiet place to live."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'in the countryside'",
+        "text": "I'd rather live in the countryside, where the air is fresh and the people are friendly."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'there' và 'their'",
+        "text": "There are more jobs in the city, but the rent there is very high."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'convenient'",
+        "text": "Public transport is convenient, so I don't need a car."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'traffic'",
+        "text": "The traffic jams are frustrating, but the variety of food and culture makes up for it."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ʃ/ và /ʒ/ 'pleasure' và 'measure'",
+        "text": "Living close to parks gives me a sense of peace that I really value."
+      }
     ]
   },
   {
@@ -479,7 +1529,7 @@
     "name": "Stress & wellbeing",
     "icon": "🧘",
     "starter": "How do you usually deal with stress?",
-    "sample": "When I feel stressed, I go for a walk or talk to a close friend.",
+    "sample": "I feel stressed when I have too many tasks.",
     "words": [
       "stressed",
       "relax",
@@ -491,6 +1541,48 @@
       "Do you think people talk about stress enough today?",
       "What helps you sleep better?",
       "How do you keep a healthy work-life balance?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /s/ trong 'stress'",
+        "text": "I feel stressed when I have too many tasks."
+      },
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'relax'",
+        "text": "I relax by listening to music."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'sleep'",
+        "text": "I try to get enough sleep every night."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'take a break'",
+        "text": "When I feel overwhelmed, I take a short break and go for a walk."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ trong 'breath'",
+        "text": "Deep breathing helps me calm down when I'm nervous."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'balance'",
+        "text": "Finding a good balance between work and rest is harder than it sounds."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'burnout'",
+        "text": "If you ignore the warning signs, you might end up with complete burnout."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ɒ/ và /ɔː/ trong 'worry' và 'more'",
+        "text": "Worrying about the future rarely solves problems, so I focus on what I can control."
+      }
     ]
   },
   {
@@ -498,7 +1590,7 @@
     "name": "Money & budgeting",
     "icon": "💰",
     "starter": "Are you good at saving money? How do you manage your budget?",
-    "sample": "I try to save twenty percent of my salary every month, and I track my spending in an app.",
+    "sample": "I try to save money every month.",
     "words": [
       "save",
       "expense",
@@ -510,6 +1602,48 @@
       "What is the most expensive thing you have bought recently?",
       "Do you think it is important to learn about investing?",
       "Would you rather have a high salary or more free time?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /m/ trong 'money'",
+        "text": "I try to save money every month."
+      },
+      {
+        "level": 1,
+        "focus": "âm /aɪ/ trong 'buy'",
+        "text": "I only buy things that I really need."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'budget'",
+        "text": "I have a budget for food and transportation."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'set aside'",
+        "text": "I set aside part of my salary for emergencies and future plans."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ trong 'thousand'",
+        "text": "A thousand dollars would help me pay for the trip I've been planning."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'expensive'",
+        "text": "Housing is expensive in this city, so I'm looking for a cheaper apartment."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'investment'",
+        "text": "I'm learning about investment, but I want to understand the risks before I put any money in."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ʃ/ và /tʃ/ 'financial' và 'choice'",
+        "text": "Making financial choices early can make a big difference in the long run."
+      }
     ]
   },
   {
@@ -517,7 +1651,7 @@
     "name": "Living abroad",
     "icon": "🌍",
     "starter": "Have you ever lived or worked in another country? What was it like?",
-    "sample": "I spent six months in Australia, and it taught me a lot about independence.",
+    "sample": "I lived in Australia for six months.",
     "words": [
       "culture shock",
       "adapt",
@@ -529,6 +1663,48 @@
       "What is the hardest part about living in a foreign country?",
       "What would you miss most about home?",
       "Would you like to live abroad in the future?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'live'",
+        "text": "I lived in Australia for six months."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɔː/ trong 'abroad'",
+        "text": "Living abroad taught me a lot."
+      },
+      {
+        "level": 1,
+        "focus": "âm /f/ trong 'food'",
+        "text": "The food was different, but I liked it."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'get used to'",
+        "text": "At first it was hard, but I got used to the new routine after a few weeks."
+      },
+      {
+        "level": 2,
+        "focus": "âm /θ/ trong 'theme' và 'thought'",
+        "text": "I thought the culture would be similar to mine, but I was wrong."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'independent'",
+        "text": "Living on my own made me more independent and confident."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'adjustment'",
+        "text": "The adjustment period was challenging, but it helped me understand different perspectives."
+      },
+      {
+        "level": 3,
+        "focus": "âm /ɜː/ và /ər/ trong 'journey' và 'learner'",
+        "text": "The whole journey taught me that every learner has a unique path to fluency."
+      }
     ]
   },
   {
@@ -536,7 +1712,7 @@
     "name": "A memorable meal",
     "icon": "🥗",
     "starter": "Describe a memorable meal you had. Where were you, and who were you with?",
-    "sample": "Last year, my friends and I had a seafood dinner by the beach, and the sunset was amazing.",
+    "sample": "Last night we had a delicious dinner.",
     "words": [
       "memorable",
       "flavor",
@@ -548,6 +1724,48 @@
       "What is the best meal you have ever cooked for someone?",
       "Do you prefer eating out or at home? Why?",
       "What is a dish you would love to try in another country?"
+    ],
+    "samples": [
+      {
+        "level": 1,
+        "focus": "âm /ɪ/ trong 'dinner'",
+        "text": "Last night we had a delicious dinner."
+      },
+      {
+        "level": 1,
+        "focus": "âm /tʃ/ trong 'lunch'",
+        "text": "We had lunch by the beach."
+      },
+      {
+        "level": 1,
+        "focus": "âm /ɔː/ trong 'sure'",
+        "text": "I'm sure it was the best meal of the year."
+      },
+      {
+        "level": 2,
+        "focus": "nối âm 'by the sea'",
+        "text": "We ate fresh seafood by the sea, and the sunset made the evening perfect."
+      },
+      {
+        "level": 2,
+        "focus": "âm /ð/ trong 'the' và 'that'",
+        "text": "The atmosphere was warm, and that made the whole experience special."
+      },
+      {
+        "level": 2,
+        "focus": "trọng âm 'memorable'",
+        "text": "It was a memorable celebration, and everyone shared their favorite stories."
+      },
+      {
+        "level": 3,
+        "focus": "chuỗi phụ âm 'homemade'",
+        "text": "The homemade soup was simple, but the flavors were so rich that I asked for a second bowl."
+      },
+      {
+        "level": 3,
+        "focus": "âm /θ/ và /s/ trong 'thoughtful' và 'special'",
+        "text": "Thoughtful friends and a special dish always make an ordinary evening feel unforgettable."
+      }
     ]
   }
 ]

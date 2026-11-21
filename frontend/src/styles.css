@@ -100,3 +100,7 @@ button.danger { color: var(--bad); border-color: var(--bad); }
 button.wide { width: 100%; }
 .account { display: flex; align-items: center; gap: 8px; margin-left: auto; }
 .account button { padding: 5px 10px; }
+
+/* ----- practice: level filter ----- */
+.chip.active { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.practice .row { align-items: center; }
