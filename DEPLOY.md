@@ -109,7 +109,7 @@ git push origin main
 ```
 
 1. Vào tab **Actions** trên GitHub, đợi job `build-images` xanh.
-2. Trên VPS, chờ tối đa 5 phút hoặc chạy tay: `bash /opt/eng-voice/deploy/poll-deploy.sh`
+2. Trên VPS, chờ tối đa 5 phút hoặc chạy tay: `bash /opt/eng-voice/vps-agent.sh poll`
 3. Xem log: `tail -f ~/eng-voice-deploy.log`
 4. Mở https://eng.ntuanvu89.id.vn.
 
