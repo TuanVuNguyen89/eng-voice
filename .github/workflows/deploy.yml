@@ -1,4 +1,4 @@
-name: build-and-deploy
+name: build-images
 
 on:
   push:
@@ -7,10 +7,6 @@ on:
 
 permissions:
   contents: read
-
-concurrency:
-  group: deploy-production
-  cancel-in-progress: false
 
 env:
   IMAGE_PREFIX: ghcr.io/tuanvunguyen89/eng-voice   # GHCR names must be lowercase
@@ -54,19 +50,3 @@ jobs:
             ${{ env.IMAGE_PREFIX }}-frontend:latest
           cache-from: type=gha,scope=frontend
           cache-to: type=gha,mode=max,scope=frontend
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Deploy over SSH
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          port: ${{ secrets.VPS_PORT || 22 }}
-          script_stop: true
-          script: |
-            bash /opt/eng-voice/deploy/deploy.sh ${{ github.sha }}

@@ -1,73 +1,56 @@
-# Triển khai lên VPS
+# Triển khai lên VPS (kéo về, không SSH từ GitHub)
 
-Domain: **https://eng.ntuanvu89.id.vn** (đổi tên nếu bạn muốn, phải sửa đồng bộ trong `deploy/*.conf`).
+Domain: **https://eng.ntuanvu89.id.vn**
 
 ## Luồng
 
 ```
 git push main
-  └─ GitHub Actions
-       ├─ build backend + frontend → push ghcr.io/tuanvunguyen89/eng-voice-{backend,frontend}:<sha>
-       └─ SSH vào VPS → /opt/eng-voice/deploy/deploy.sh <sha>
-            ├─ git reset về origin/main
-            ├─ docker compose -f docker-compose.prod.yml pull && up -d
-            └─ health check http://127.0.0.1:9120/api/health
+  └─ GitHub Actions (.github/workflows/deploy.yml)
+       └─ build backend + frontend → ghcr.io/tuanvunguyen89/eng-voice-{backend,frontend}:<sha>
+
+VPS, cron mỗi 5 phút (deploy/poll-deploy.sh)
+  ├─ git fetch origin/main → có commit mới chưa deploy?
+  ├─ image của commit đó đã có trên GHCR chưa?
+  └─ có → deploy/deploy.sh <sha>: git reset, compose pull, up -d, health check
 
 Trình duyệt → Cloudflare (proxy, SSL Full strict)
            → nginx biên 113.190.235.211:443 (origin.pem)
-           → VPS 192.168.2.61:80 (nginx, theo server_name)
-           → 127.0.0.1:9120 (frontend container) → backend / postgres / minio (trong mạng docker)
+           → VPS 192.168.2.61:80 (nginx theo server_name)
+           → 127.0.0.1:9120 (frontend) → backend / postgres / minio
 ```
 
-Port 9120 chỉ bind trên `127.0.0.1` của VPS, nên không lộ ra ngoài.
+GitHub không cần truy cập VPS. Thời gian từ lúc push đến lúc lên production: tối đa khoảng 5 phút sau khi CI build xong.
 
-## 1. GitHub: secrets và environment
+## 1. GitHub
 
-Repo → **Settings → Secrets and variables → Actions**, thêm:
+Không cần secret nào cho deploy. Workflow chỉ dùng `GITHUB_TOKEN` có sẵn để đẩy image.
 
-| Secret | Giá trị |
-|---|---|
-| `VPS_HOST` | IP/host SSH của VPS (ví dụ `192.168.2.61` nếu SSH từ mạng nội bộ, hoặc IP công khai) |
-| `VPS_USER` | user SSH trên VPS (ví dụ `deploy`) |
-| `VPS_SSH_KEY` | private key ed25519 của user đó (nội dung đầy đủ, gồm dòng BEGIN/END) |
-| `VPS_PORT` | (tuỳ chọn) port SSH, mặc định 22 |
+Sau lần build đầu tiên, vào **Packages** → từng package (`eng-voice-backend`, `eng-voice-frontend`) → **Package settings → Change visibility → Public**. Khi đó VPS kéo image không cần đăng nhập.
 
-Tạo key riêng cho CI, không dùng key cá nhân:
+Nếu giữ private, xem bước 2.3.
 
-```bash
-ssh-keygen -t ed25519 -C "github-actions-eng-voice" -f ~/eng-voice-ci -N ""
-# public key → VPS:
-ssh-copy-id -i ~/eng-voice-ci.pub user@VPS
-# private key ~/eng-voice-ci → dán vào secret VPS_SSH_KEY
-```
+## 2. VPS: cài đặt một lần
 
-Tạo environment **production** (Settings → Environments → New). Nên bật "Required reviewers" để mỗi lần deploy phải bấm duyệt.
-
-Package GHCR: sau lần push đầu, vào Packages → từng package → **Package settings → Change visibility → Public** để VPS kéo không cần đăng nhập. Nếu muốn giữ private, xem bước 2.3.
-
-## 2. VPS: chuẩn bị một lần
-
-### 2.1 Cài Docker và clone repo
+### 2.1 Clone repo
 
 ```bash
 sudo mkdir -p /opt/eng-voice && sudo chown $USER:$USER /opt/eng-voice
 git clone https://github.com/TuanVuNguyen89/eng-voice.git /opt/eng-voice
 cd /opt/eng-voice
+chmod +x deploy/*.sh
 ```
 
-Repo đang public nên clone không cần token. Nếu bạn đổi sang private, dùng deploy key hoặc PAT.
-
-### 2.2 Tạo file `.env` (KHÔNG commit)
+### 2.2 Tạo `.env` (không commit)
 
 ```bash
-cp .env.example .env
-nano .env
+cp .env.example .env && nano .env
 ```
 
-Điền thật (đổi các giá trị mặc định):
+Điền thật:
 
 ```
-OPENAI_API_KEY=...          # key của bạn
+OPENAI_API_KEY=...
 OPENAI_BASE_URL=https://omniroute.tunyen.com/v1
 OPENAI_MODEL=uberllm/anthropic/claude-haiku-5.5
 POSTGRES_PASSWORD=<openssl rand -hex 24>
@@ -76,32 +59,47 @@ MINIO_ROOT_PASSWORD=<openssl rand -hex 24>
 APP_PORT=9120
 ```
 
-Kiểm tra port 9120 còn trống: `ss -ltn | grep 9120` (không có dòng nào là ổn).
+Kiểm tra port trống: `ss -ltn | grep 9120` (không có dòng nào là ổn).
 
-### 2.3 Đăng nhập GHCR (chỉ cần nếu package để private)
+### 2.3 Nếu package để private
 
-Tạo PAT (classic) với quyền `read:packages`, rồi:
+Tạo PAT (classic) có quyền `read:packages`:
 
 ```bash
 echo "<PAT>" | docker login ghcr.io -u TuanVuNguyen89 --password-stdin
 ```
 
-### 2.4 Cho phép user deploy chạy docker và script
+### 2.4 Quyền docker
 
 ```bash
-sudo usermod -aG docker $USER      # đăng xuất/đăng nhập lại sau lệnh này
-chmod +x /opt/eng-voice/deploy/deploy.sh
+sudo usermod -aG docker $USER     # đăng xuất rồi đăng nhập lại
 ```
 
-Thử deploy tay lần đầu (cần image đã được CI push, tức là đã chạy workflow ít nhất một lần):
+### 2.5 Chạy thử một lần (sau khi CI đã build xong)
 
 ```bash
-cd /opt/eng-voice && bash deploy/deploy.sh latest
+bash /opt/eng-voice/deploy/poll-deploy.sh
 ```
 
-## 3. VPS nginx (port 80, cùng kiểu với các site khác)
+Lần đầu, script sẽ deploy commit mới nhất trên `main` nếu image đã có. Nếu log báo "not ready", đợi CI xong rồi chạy lại.
 
-Tạo file `/etc/nginx/sites-available/eng.ntuanvu89.id.vn` với nội dung `deploy/vps-nginx-eng.conf`, rồi bật:
+### 2.6 Bật cron mỗi 5 phút
+
+```bash
+crontab -e
+```
+
+Thêm dòng:
+
+```
+*/5 * * * * bash /opt/eng-voice/deploy/poll-deploy.sh >> $HOME/eng-voice-deploy.log 2>&1
+```
+
+Xem log: `tail -f ~/eng-voice-deploy.log`. Khi không có gì mới, script không ghi log nên file vẫn gọn.
+
+## 3. VPS nginx (port 80)
+
+Copy `deploy/vps-nginx-eng.conf` vào `/etc/nginx/sites-available/eng.ntuanvu89.id.vn`:
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/eng.ntuanvu89.id.vn /etc/nginx/sites-enabled/
@@ -111,7 +109,7 @@ curl -s -H "Host: eng.ntuanvu89.id.vn" http://127.0.0.1/api/health   # → {"ok"
 
 ## 4. nginx biên (113.190.235.211)
 
-Thêm một site giống `hermes.ntuanvu89.id.vn`, nội dung trong `deploy/edge-nginx-eng.conf`. Đường dẫn cert phải trỏ đúng file hiện có (`origin.pem`, `origin.key`) trên máy đó. Nếu cert hiện tại chỉ dành cho hermes, dùng cert Cloudflare Origin cho `*.ntuanvu89.id.vn`.
+Thêm site theo `deploy/edge-nginx-eng.conf`. Kiểm tra đường dẫn cert `origin.pem` và `origin.key` có đúng trên máy này.
 
 ```bash
 sudo nginx -t && sudo systemctl reload nginx
@@ -119,36 +117,31 @@ sudo nginx -t && sudo systemctl reload nginx
 
 ## 5. Cloudflare
 
-1. **DNS → Add record**: Type `A`, Name `eng`, IPv4 `113.190.235.211`, **Proxied** (đám mây cam). Giống record `hermes` trong ảnh.
-2. **SSL/TLS → Overview**: đặt **Full (strict)** (vì nginx biên đang dùng cert origin hợp lệ).
-3. Chứng chỉ Universal `*.ntuanvu89.id.vn` đã Active, nên không cần cấp thêm.
+1. **DNS → Add record**: Type `A`, Name `eng`, IPv4 `113.190.235.211`, **Proxied** (cam).
+2. **SSL/TLS → Overview**: **Full (strict)**.
+3. Cert Universal `*.ntuanvu89.id.vn` đang Active, không cần cấp thêm.
 
-## 6. Chạy lần đầu
-
-1. Đẩy code lên `main` (xem mục 7). Workflow build image và chờ bạn duyệt environment `production`.
-2. Mở https://eng.ntuanvu89.id.vn, đăng ký tài khoản và kiểm tra app.
-
-## 7. Push code lên GitHub
+## 6. Push code
 
 ```bash
 cd D:\project\english-bots
-git init -b main
-git add .
-git status            # KIỂM TRA: không được thấy .env
-git commit -m "Initial commit: eng-voice (React + FastAPI + PostgreSQL + MinIO)"
-git remote add origin https://github.com/TuanVuNguyen89/eng-voice.git
-git push -u origin main
+git add -A && git status        # KIỂM TRA: không có .env
+git commit -m "..."
+git push origin main
 ```
 
-## Cập nhật sau này
+## Rollback
 
-Chỉ cần `git push origin main`. CI tự build, bạn duyệt environment, VPS tự deploy.
+```bash
+cd /opt/eng-voice && bash deploy/deploy.sh <sha-cũ>
+echo <sha-cũ> > ~/.eng-voice-deployed-sha     # để cron không deploy lại commit mới nhất
+```
 
-Rollback: trên VPS chạy `bash /opt/eng-voice/deploy/deploy.sh <sha-cũ>`, với sha là tag image trước đó trong GHCR.
+Sau rollback, muốn quay lại bản mới nhất chỉ cần xoá file `~/.eng-voice-deployed-sha`, cron sẽ deploy lại `origin/main`.
 
 ## Lưu ý bảo mật
 
-- `.env` và private key không bao giờ được commit. `.gitignore` đã chặn `.env`.
-- Key OpenAI đã từng xuất hiện trong chat, nên nên đổi sang key mới.
-- Basic Auth chỉ an toàn khi đi qua HTTPS. Từ trình duyệt đến Cloudflare và từ Cloudflare đến nginx biên là HTTPS. Đoạn nginx biên → VPS (`192.168.2.61:80`) vẫn là HTTP, nên chỉ chấp nhận được khi nó nằm trong mạng nội bộ hoặc VPN đáng tin cậy.
-- Postgres và MinIO không được publish ra ngoài; chỉ frontend có port 127.0.0.1:9120.
+- `.env` và mọi secret không được commit. `.gitignore` đã chặn `.env`.
+- Key OpenAI đã từng xuất hiện trong chat, nên đổi sang key mới.
+- Basic Auth chỉ an toàn qua HTTPS. Từ trình duyệt đến nginx biên là HTTPS. Đoạn nginx biên → VPS (`192.168.2.61:80`) là HTTP, chỉ chấp nhận được trong mạng nội bộ đáng tin.
+- Postgres và MinIO không publish ra ngoài. Chỉ frontend có port `127.0.0.1:9120`.
