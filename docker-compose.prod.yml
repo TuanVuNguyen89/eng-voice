@@ -1,4 +1,4 @@
-# Production stack for the VPS. Images are built by GitHub Actions and pulled from GHCR.
+# Production stack for the VPS. Images are built by GitHub Actions and pulled from Docker Hub.
 # Only the frontend is published, and only on 127.0.0.1 so the host nginx can reach it.
 services:
   postgres:
@@ -26,7 +26,7 @@ services:
       - miniodata:/bitnami/minio/data
 
   backend:
-    image: ghcr.io/tuanvunguyen89/eng-voice-backend:${IMAGE_TAG:-latest}
+    image: ${IMAGE_NAMESPACE:?set IMAGE_NAMESPACE in .env}/eng-voice-backend:${IMAGE_TAG:-latest}
     restart: unless-stopped
     depends_on:
       postgres:
@@ -44,7 +44,7 @@ services:
       MINIO_BUCKET: ${MINIO_BUCKET:-speak-audio}
 
   frontend:
-    image: ghcr.io/tuanvunguyen89/eng-voice-frontend:${IMAGE_TAG:-latest}
+    image: ${IMAGE_NAMESPACE:?set IMAGE_NAMESPACE in .env}/eng-voice-frontend:${IMAGE_TAG:-latest}
     restart: unless-stopped
     depends_on:
       - backend

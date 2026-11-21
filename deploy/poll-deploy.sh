@@ -8,7 +8,6 @@ set -euo pipefail
 
 APP_DIR="${APP_DIR:-/opt/eng-voice}"
 STATE_FILE="${STATE_FILE:-$HOME/.eng-voice-deployed-sha}"
-IMAGE_PREFIX="${IMAGE_PREFIX:-ghcr.io/tuanvunguyen89/eng-voice}"
 LOCK_FILE="${LOCK_FILE:-$HOME/.eng-voice-deploy.lock}"
 
 log() { echo "$(date -Is) $*"; }
@@ -23,6 +22,8 @@ if command -v flock >/dev/null 2>&1; then
 fi
 
 cd "$APP_DIR"
+if [ -f .env ]; then set -a; . ./.env; set +a; fi
+IMAGE_PREFIX="${IMAGE_PREFIX:-${IMAGE_NAMESPACE:?set IMAGE_NAMESPACE in .env}/eng-voice}"
 git fetch --quiet --depth 1 origin main
 LATEST="$(git rev-parse origin/main)"
 DEPLOYED="$(cat "$STATE_FILE" 2>/dev/null || true)"
