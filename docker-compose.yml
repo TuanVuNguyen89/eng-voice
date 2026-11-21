@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: speak
+      POSTGRES_USER: speak
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-speak_dev_pw}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U speak -d speak"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  minio:
+    # Bitnami packaging of MinIO (the official minio/minio Docker Hub image is no longer pullable).
+    image: bitnamilegacy/minio:2024.10.13
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin123}
+      MINIO_CONSOLE_PORT_NUMBER: 9001
+    volumes:
+      - miniodata:/bitnami/minio/data
+    ports:
+      - "9001:9001"   # MinIO web console (optional)
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    environment:
+      DATABASE_URL: postgresql+psycopg://speak:${POSTGRES_PASSWORD:-speak_dev_pw}@postgres:5432/speak
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD:-minioadmin123}
+      MINIO_BUCKET: ${MINIO_BUCKET:-speak-audio}
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${APP_PORT:-8080}:80"
+
+volumes:
+  pgdata:
+  miniodata:

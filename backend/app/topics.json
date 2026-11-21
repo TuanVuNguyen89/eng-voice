@@ -1,0 +1,553 @@
+[
+  {
+    "id": "daily",
+    "name": "Daily routine",
+    "icon": "☀️",
+    "starter": "What does a typical morning look like for you?",
+    "sample": "I usually wake up at seven, have breakfast, and then head to work.",
+    "words": [
+      "routine",
+      "commute",
+      "breakfast",
+      "schedule",
+      "on time"
+    ],
+    "followups": [
+      "What time do you usually get up?",
+      "Do you prefer mornings or evenings? Why?",
+      "What do you do during your commute?"
+    ]
+  },
+  {
+    "id": "food",
+    "name": "Food & cooking",
+    "icon": "🍜",
+    "starter": "What is your favorite dish, and how would you describe its taste?",
+    "sample": "My favorite dish is pho, because the broth is warm and full of flavor.",
+    "words": [
+      "recipe",
+      "ingredient",
+      "delicious",
+      "spicy",
+      "seasoning"
+    ],
+    "followups": [
+      "Do you enjoy cooking at home?",
+      "What is the hardest dish you have ever made?",
+      "Which restaurant would you recommend to a foreign friend?"
+    ]
+  },
+  {
+    "id": "travel",
+    "name": "Travel",
+    "icon": "✈️",
+    "starter": "Where would you love to travel next, and why?",
+    "sample": "I would really like to visit Japan, because I am fascinated by its culture and food.",
+    "words": [
+      "itinerary",
+      "destination",
+      "passport",
+      "souvenir",
+      "layover"
+    ],
+    "followups": [
+      "Do you prefer traveling alone or with friends?",
+      "What is the most memorable trip you have taken?",
+      "How do you usually plan your trips?"
+    ]
+  },
+  {
+    "id": "work",
+    "name": "Work & career",
+    "icon": "💼",
+    "starter": "What do you do for work, and what do you enjoy most about it?",
+    "sample": "I work as a designer, and I enjoy solving problems creatively with my team.",
+    "words": [
+      "colleague",
+      "deadline",
+      "project",
+      "responsibility",
+      "promotion"
+    ],
+    "followups": [
+      "How do you handle a tight deadline?",
+      "Which skills matter most in your job?",
+      "Would you like to change careers someday?"
+    ]
+  },
+  {
+    "id": "interview",
+    "name": "Job interview",
+    "icon": "🎤",
+    "starter": "Tell me a little about yourself and why you want this job.",
+    "sample": "I have three years of experience in marketing, and I am excited about this opportunity.",
+    "words": [
+      "experience",
+      "strengths",
+      "achievement",
+      "teamwork",
+      "goal"
+    ],
+    "followups": [
+      "What is your greatest strength?",
+      "Can you describe a challenge you overcame at work?",
+      "Where do you see yourself in three years?"
+    ]
+  },
+  {
+    "id": "restaurant",
+    "name": "Ordering food",
+    "icon": "🍽️",
+    "starter": "Hi, welcome! Are you ready to order, or do you need a few more minutes?",
+    "sample": "Could I see the menu, please? I would like the grilled chicken, and a glass of water.",
+    "words": [
+      "menu",
+      "appetizer",
+      "bill",
+      "allergy",
+      "recommend"
+    ],
+    "followups": [
+      "Do you have any food allergies I should know about?",
+      "Would you like something to drink with your meal?",
+      "Would you like to see the dessert menu?"
+    ]
+  },
+  {
+    "id": "directions",
+    "name": "Asking directions",
+    "icon": "🗺️",
+    "starter": "Excuse me, could you tell me how to get to the nearest train station?",
+    "sample": "Go straight for two blocks, then turn left. It is across from the bank.",
+    "words": [
+      "turn left",
+      "straight ahead",
+      "across from",
+      "block",
+      "next to"
+    ],
+    "followups": [
+      "Is it far, or can I walk there?",
+      "Do you know any landmarks near the station?",
+      "Have you ever gotten lost in a foreign city?"
+    ]
+  },
+  {
+    "id": "doctor",
+    "name": "At the doctor",
+    "icon": "🩺",
+    "starter": "Hello, what seems to be the problem today?",
+    "sample": "I have had a headache and a slight fever since yesterday.",
+    "words": [
+      "symptom",
+      "fever",
+      "headache",
+      "prescription",
+      "appointment"
+    ],
+    "followups": [
+      "How long have you felt this way?",
+      "Have you taken any medicine yet?",
+      "Are you allergic to any medication?"
+    ]
+  },
+  {
+    "id": "shopping",
+    "name": "Shopping",
+    "icon": "🛍️",
+    "starter": "Do you prefer shopping online or in physical stores? Why?",
+    "sample": "I usually shop online because it saves time and I can compare prices easily.",
+    "words": [
+      "discount",
+      "receipt",
+      "refund",
+      "budget",
+      "size"
+    ],
+    "followups": [
+      "Have you ever returned something you bought?",
+      "How do you decide if something is worth the price?",
+      "Do you enjoy looking for bargains?"
+    ]
+  },
+  {
+    "id": "hobbies",
+    "name": "Hobbies",
+    "icon": "🎨",
+    "starter": "What do you like to do in your free time?",
+    "sample": "In my free time, I enjoy reading novels and going for long walks.",
+    "words": [
+      "hobby",
+      "relax",
+      "collect",
+      "weekend",
+      "habit"
+    ],
+    "followups": [
+      "How did you first get into that hobby?",
+      "Would you like to try a new hobby this year?",
+      "Do you prefer hobbies you do alone or with others?"
+    ]
+  },
+  {
+    "id": "movies",
+    "name": "Movies & TV",
+    "icon": "🎬",
+    "starter": "What is the last movie or show you really enjoyed?",
+    "sample": "I recently watched a documentary about the ocean, and it was truly breathtaking.",
+    "words": [
+      "plot",
+      "character",
+      "genre",
+      "actor",
+      "recommend"
+    ],
+    "followups": [
+      "Who is your favorite actor, and why?",
+      "Would you recommend that movie to me?",
+      "Do you watch movies in theaters or at home?"
+    ]
+  },
+  {
+    "id": "music",
+    "name": "Music",
+    "icon": "🎵",
+    "starter": "What kind of music do you listen to when you study or relax?",
+    "sample": "When I study, I usually listen to calm instrumental music.",
+    "words": [
+      "genre",
+      "lyrics",
+      "concert",
+      "playlist",
+      "melody"
+    ],
+    "followups": [
+      "Have you ever been to a live concert?",
+      "Do you have a favorite song right now?",
+      "Can you play any musical instrument?"
+    ]
+  },
+  {
+    "id": "sports",
+    "name": "Sports & fitness",
+    "icon": "⚽",
+    "starter": "Do you play any sports, or do you exercise regularly?",
+    "sample": "I try to go running three times a week to stay healthy and keep my energy up.",
+    "words": [
+      "workout",
+      "team",
+      "score",
+      "train",
+      "competition"
+    ],
+    "followups": [
+      "Do you prefer team sports or individual sports?",
+      "Who is your favorite athlete?",
+      "What is a good workout for a beginner?"
+    ]
+  },
+  {
+    "id": "tech",
+    "name": "Technology",
+    "icon": "💻",
+    "starter": "How has technology changed the way you live or work?",
+    "sample": "Smartphones have made it much easier to stay in touch with my family.",
+    "words": [
+      "device",
+      "app",
+      "update",
+      "privacy",
+      "internet"
+    ],
+    "followups": [
+      "Do we spend too much time on our phones?",
+      "What app do you use every day?",
+      "How do you protect your personal information online?"
+    ]
+  },
+  {
+    "id": "future",
+    "name": "Future plans",
+    "icon": "🚀",
+    "starter": "Where do you see yourself in five years?",
+    "sample": "In five years, I hope to be leading my own team and learning a new language.",
+    "words": [
+      "goal",
+      "plan",
+      "opportunity",
+      "improve",
+      "career"
+    ],
+    "followups": [
+      "What goal are you working toward right now?",
+      "What would you like to improve about yourself?",
+      "Would you like to live abroad someday?"
+    ]
+  },
+  {
+    "id": "smalltalk",
+    "name": "Small talk",
+    "icon": "☕",
+    "starter": "Hi there! How has your week been so far?",
+    "sample": "It has been busy, but I am glad the weekend is finally here.",
+    "words": [
+      "busy",
+      "catch up",
+      "relaxing",
+      "weather",
+      "plans"
+    ],
+    "followups": [
+      "Do you have any plans for the weekend?",
+      "How is the weather where you live today?",
+      "We should catch up over coffee sometime. Are you free?"
+    ]
+  },
+  {
+    "id": "family",
+    "name": "Family & friends",
+    "icon": "👨‍👩‍👧",
+    "starter": "Tell me about your family. Who do you live with?",
+    "sample": "I live with my parents and my younger brother, and we usually have dinner together.",
+    "words": [
+      "relatives",
+      "grandparents",
+      "get along",
+      "close to",
+      "support"
+    ],
+    "followups": [
+      "What do you usually do together on weekends?",
+      "Do you have a family tradition you really enjoy?",
+      "How often do you keep in touch with your friends?"
+    ]
+  },
+  {
+    "id": "weather",
+    "name": "Weather & seasons",
+    "icon": "⛅",
+    "starter": "What is the weather like where you live today?",
+    "sample": "It is quite hot and humid in the afternoon, but it cools down in the evening.",
+    "words": [
+      "humid",
+      "forecast",
+      "rainy season",
+      "chilly",
+      "sunny"
+    ],
+    "followups": [
+      "Which season do you like the most, and why?",
+      "Do you check the weather forecast every day?",
+      "How does the weather affect your mood?"
+    ]
+  },
+  {
+    "id": "environment",
+    "name": "Environment",
+    "icon": "🌱",
+    "starter": "What can people do to protect the environment in daily life?",
+    "sample": "I try to recycle plastic bottles and turn off the lights when I leave a room.",
+    "words": [
+      "recycle",
+      "pollution",
+      "energy",
+      "climate",
+      "reduce"
+    ],
+    "followups": [
+      "Should governments or individuals do more?",
+      "Have you noticed changes in your city air quality?",
+      "Which habit would you like to change to help the planet?"
+    ]
+  },
+  {
+    "id": "tet",
+    "name": "Vietnamese culture",
+    "icon": "🇻🇳",
+    "starter": "How do people celebrate Tết in your family?",
+    "sample": "Every year, my family cleans the house and makes banh chung together before the New Year.",
+    "words": [
+      "festival",
+      "tradition",
+      "family reunion",
+      "lucky money",
+      "celebrate"
+    ],
+    "followups": [
+      "What is your favorite food during Tết?",
+      "Which tradition would foreigners find most interesting?",
+      "How has the way people celebrate changed over the years?"
+    ]
+  },
+  {
+    "id": "books",
+    "name": "Books & reading",
+    "icon": "📚",
+    "starter": "Do you enjoy reading? What have you read recently?",
+    "sample": "I read a few pages every night before bed, mostly short novels and biographies.",
+    "words": [
+      "novel",
+      "author",
+      "chapter",
+      "bookshelf",
+      "recommend"
+    ],
+    "followups": [
+      "Do you prefer paper books or e-books? Why?",
+      "Is there a book that changed the way you think?",
+      "Would you like to write a book someday?"
+    ]
+  },
+  {
+    "id": "education",
+    "name": "Education & studying",
+    "icon": "🎓",
+    "starter": "What did you study at school or university, and why did you choose it?",
+    "sample": "I studied economics because I wanted to understand how businesses make decisions.",
+    "words": [
+      "major",
+      "degree",
+      "exam",
+      "lecture",
+      "scholarship"
+    ],
+    "followups": [
+      "What is the best way for you to learn something new?",
+      "Would you like to study abroad? Why or why not?",
+      "What advice would you give to a student today?"
+    ]
+  },
+  {
+    "id": "childhood",
+    "name": "Childhood memories",
+    "icon": "🧸",
+    "starter": "What is one of your favorite memories from when you were a child?",
+    "sample": "When I was little, my grandmother used to take me to the market every Sunday.",
+    "words": [
+      "childhood",
+      "nostalgic",
+      "grew up",
+      "neighborhood",
+      "remember"
+    ],
+    "followups": [
+      "What games did you play as a kid?",
+      "How has your hometown changed since then?",
+      "What did you want to be when you grew up?"
+    ]
+  },
+  {
+    "id": "social",
+    "name": "Social media",
+    "icon": "📱",
+    "starter": "How much time do you spend on social media, and how does it make you feel?",
+    "sample": "I spend about an hour a day scrolling, but I try to limit it before bed.",
+    "words": [
+      "post",
+      "follower",
+      "scroll",
+      "addictive",
+      "screen time"
+    ],
+    "followups": [
+      "Do you think social media is more helpful or harmful?",
+      "Have you ever taken a break from social media?",
+      "What kind of content do you enjoy watching online?"
+    ]
+  },
+  {
+    "id": "city",
+    "name": "City vs countryside",
+    "icon": "🏙️",
+    "starter": "Would you rather live in a busy city or in the countryside? Why?",
+    "sample": "I would prefer to live in a city, because there are more jobs and things to do.",
+    "words": [
+      "downtown",
+      "suburbs",
+      "traffic",
+      "peaceful",
+      "convenient"
+    ],
+    "followups": [
+      "What do you miss most about your hometown?",
+      "How do you deal with traffic in your city?",
+      "What would make your city a better place to live?"
+    ]
+  },
+  {
+    "id": "stress",
+    "name": "Stress & wellbeing",
+    "icon": "🧘",
+    "starter": "How do you usually deal with stress?",
+    "sample": "When I feel stressed, I go for a walk or talk to a close friend.",
+    "words": [
+      "stressed",
+      "relax",
+      "mental health",
+      "burnout",
+      "balance"
+    ],
+    "followups": [
+      "Do you think people talk about stress enough today?",
+      "What helps you sleep better?",
+      "How do you keep a healthy work-life balance?"
+    ]
+  },
+  {
+    "id": "money",
+    "name": "Money & budgeting",
+    "icon": "💰",
+    "starter": "Are you good at saving money? How do you manage your budget?",
+    "sample": "I try to save twenty percent of my salary every month, and I track my spending in an app.",
+    "words": [
+      "save",
+      "expense",
+      "income",
+      "bills",
+      "invest"
+    ],
+    "followups": [
+      "What is the most expensive thing you have bought recently?",
+      "Do you think it is important to learn about investing?",
+      "Would you rather have a high salary or more free time?"
+    ]
+  },
+  {
+    "id": "abroad",
+    "name": "Living abroad",
+    "icon": "🌍",
+    "starter": "Have you ever lived or worked in another country? What was it like?",
+    "sample": "I spent six months in Australia, and it taught me a lot about independence.",
+    "words": [
+      "culture shock",
+      "adapt",
+      "expat",
+      "homesick",
+      "language barrier"
+    ],
+    "followups": [
+      "What is the hardest part about living in a foreign country?",
+      "What would you miss most about home?",
+      "Would you like to live abroad in the future?"
+    ]
+  },
+  {
+    "id": "meal",
+    "name": "A memorable meal",
+    "icon": "🥗",
+    "starter": "Describe a memorable meal you had. Where were you, and who were you with?",
+    "sample": "Last year, my friends and I had a seafood dinner by the beach, and the sunset was amazing.",
+    "words": [
+      "memorable",
+      "flavor",
+      "atmosphere",
+      "celebrate",
+      "homemade"
+    ],
+    "followups": [
+      "What is the best meal you have ever cooked for someone?",
+      "Do you prefer eating out or at home? Why?",
+      "What is a dish you would love to try in another country?"
+    ]
+  }
+]
