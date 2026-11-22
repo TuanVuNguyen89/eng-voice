@@ -43,9 +43,9 @@ latest_sha() {
   code="$(curl "${args[@]}" "$API/commits/$BRANCH")" || return 1
   case "$code" in
     200)
-      tr -d '
+      tr -d '
 ' < "$body" > "$APP_DIR/.gh-sha"
-      tr -d '
+      tr -d '
 ' < <(grep -i '^etag:' "$hdr" | sed 's/^[Ee][Tt]ag: *//') > "$APP_DIR/.gh-etag"
       cat "$APP_DIR/.gh-sha" ;;
     304) cat "$APP_DIR/.gh-sha" ;;
