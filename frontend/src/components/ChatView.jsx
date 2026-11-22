@@ -238,29 +238,50 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
       <div className="log" ref={logRef} aria-live="polite">
         {messages.map((m) => (
           <div key={m.id} className={`msg-row ${m.role}`}>
-            <div className={`msg ${m.role}${m.failed ? ' failed' : ''}`}>
-              <p>{m.text}</p>
-              <div className="msg-tools">
-                {m.role === 'assistant' && (
-                  <button type="button" className="say" title="Nghe lại" onClick={() => speak(m.text, { voiceName: voiceRef.current, rate: rateRef.current })}>
-                    🔊
-                  </button>
+            {m.role === 'assistant' && <Mascot mood="idle" size={36} />}
+            <div className="msg-col">
+              <span className="who">{m.role === 'user' ? 'Bạn' : 'Sao'}</span>
+              <div className={`msg ${m.role}${m.failed ? ' failed' : ''}`}>
+                <p>{m.text}</p>
+                {(m.role === 'assistant' || m.audio_url || m.pending || m.failed) && (
+                  <div className="msg-tools">
+                    {m.role === 'assistant' && (
+                      <button
+                        type="button"
+                        className="say listen"
+                        onClick={() => speak(m.text, { voiceName: voiceRef.current, rate: rateRef.current })}
+                      >
+                        🔊 Nghe lại
+                      </button>
+                    )}
+                    {m.audio_url && <AudioClip url={m.audio_url} />}
+                    {m.pending && <small className="muted">đang gửi...</small>}
+                    {m.failed && <small className="err-text">chưa lưu</small>}
+                  </div>
                 )}
-                {m.audio_url && <AudioClip url={m.audio_url} />}
               </div>
-              {m.pending && <small className="muted">đang gửi...</small>}
-              {m.failed && <small className="err-text">chưa lưu</small>}
+              {m.role === 'user' && m.feedback && (
+                <Feedback feedback={m.feedback} voiceName={voiceRef.current} rate={rateRef.current} />
+              )}
             </div>
-            {m.role === 'user' && m.feedback && <Feedback feedback={m.feedback} voiceName={voiceRef.current} rate={rateRef.current} />}
           </div>
         ))}
         {phase === 'listening' && live && (
           <div className="msg-row user">
-            <div className="msg user live-text"><p>{live}</p></div>
+            <div className="msg-col">
+              <span className="who">Bạn</span>
+              <div className="msg user live-text"><p>{live}</p></div>
+            </div>
           </div>
         )}
         {phase === 'thinking' && (
-          <div className="msg-row assistant"><div className="msg assistant typing"><p>…</p></div></div>
+          <div className="msg-row assistant">
+            <Mascot mood="thinking" size={36} />
+            <div className="msg-col">
+              <span className="who">Sao</span>
+              <div className="msg assistant typing"><p>…</p></div>
+            </div>
+          </div>
         )}
       </div>
 

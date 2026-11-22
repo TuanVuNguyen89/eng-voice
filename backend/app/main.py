@@ -5,8 +5,8 @@ from pathlib import Path
 from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
-from sqlalchemy import func, select
-from sqlalchemy.orm import Session as DBSession, selectinload
+from sqlalchemy import exists, func, select
+from sqlalchemy.orm import Session as DBSession, aliased, selectinload
 
 from . import storage
 from .auth import current_user, hash_password, validate_new_account
@@ -146,10 +146,13 @@ def topics(user: User = Depends(current_user)):
 
 @app.get("/api/sessions")
 def list_sessions(user: User = Depends(current_user), db: DBSession = Depends(get_db)):
+    # Only conversations where the learner actually said or typed something.
+    UserTurn = aliased(Message)  # separate alias so the EXISTS subquery does not auto-correlate with the outer join
+    spoke = exists().where(UserTurn.session_id == Session.id, UserTurn.role == "user")
     rows = db.execute(
         select(Session, func.count(Message.id))
         .outerjoin(Message, Message.session_id == Session.id)
-        .where(Session.user_id == user.id)
+        .where(Session.user_id == user.id, spoke)
         .group_by(Session.id)
         .order_by(Session.created_at.desc())
     ).all()
@@ -173,6 +176,13 @@ def create_session(body: CreateSession, user: User = Depends(current_user), db: 
 @app.get("/api/sessions/{session_id}")
 def get_session(session_id: uuid.UUID, user: User = Depends(current_user), db: DBSession = Depends(get_db)):
     return session_out(load_owned_session(db, session_id, user))
+
+
+@app.get("/api/sessions/{session_id}/has-turns")
+def session_has_turns(session_id: uuid.UUID, user: User = Depends(current_user), db: DBSession = Depends(get_db)):
+    load_owned_session(db, session_id, user, with_messages=False)
+    has = db.scalar(select(exists().where(Message.session_id == session_id, Message.role == "user")))
+    return {"has_turns": bool(has)}
 
 
 @app.delete("/api/sessions/{session_id}", status_code=204)

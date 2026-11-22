@@ -31,6 +31,14 @@ def init_db(retries: int = 30, delay: float = 2.0) -> None:
             with engine.connect() as conn:
                 conn.execute(text("SELECT 1"))
             Base.metadata.create_all(engine)
+            # Conversations with no learner turn (opened but never spoken) are not history.
+            with engine.begin() as conn:
+                conn.execute(
+                    text(
+                        "DELETE FROM sessions s WHERE NOT EXISTS ("
+                        "SELECT 1 FROM messages m WHERE m.session_id = s.id AND m.role = 'user')"
+                    )
+                )
             # Migration for databases created before accounts existed.
             with engine.begin() as conn:
                 conn.execute(

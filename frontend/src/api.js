@@ -51,6 +51,7 @@ export const createSession = (topicId) =>
   request('/sessions', { method: 'POST', headers: JSON_HEADERS, body: JSON.stringify({ topic_id: topicId }) });
 export const getSession = (id) => request(`/sessions/${id}`);
 export const deleteSession = (id) => request(`/sessions/${id}`, { method: 'DELETE' });
+export const hasTurns = (id) => request(`/sessions/${id}/has-turns`);
 
 export function postTurn(sessionId, text, audioBlob) {
   const form = new FormData();

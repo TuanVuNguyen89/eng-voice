@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { createSession, getConfig, getTopics, login, setAuthLostHandler, setToken } from './api';
+import { createSession, deleteSession, getConfig, getTopics, hasTurns, login, setAuthLostHandler, setToken } from './api';
 import { englishVoices, speak } from './speech';
 import AuthView from './components/AuthView';
 import ChatView from './components/ChatView';
@@ -109,8 +109,19 @@ function Workspace({ username, onLogout }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [topics]);
 
+  // A conversation the learner never spoke in is not kept: drop it when moving on.
+  async function discardIfEmpty(id) {
+    if (!id) return;
+    try {
+      const r = await hasTurns(id);
+      if (!r.has_turns) await deleteSession(id);
+    } catch (e) { /* keep it if the check fails */ }
+  }
+
   async function newChat(topicId) {
     setError('');
+    const previous = sessionId;
+    discardIfEmpty(previous);
     try {
       const s = await createSession(topicId);
       setSessionId(s.id);
