@@ -1,4 +1,4 @@
-// Bo, the tutor robot. Its mood follows the app state: idle, listening, thinking, speaking, happy.
+// Genie, the tutor. Its mood follows the app state: idle, listening, thinking, speaking, happy.
 export default function Mascot({ mood = 'idle', size = 96 }) {
   return (
     <svg
@@ -7,21 +7,21 @@ export default function Mascot({ mood = 'idle', size = 96 }) {
       height={size}
       viewBox="0 0 120 120"
       role="img"
-      aria-label={`Bo đang ${MOOD_LABEL[mood] || 'nghỉ'}`}
+      aria-label={`Genie đang ${MOOD_LABEL[mood] || 'nghỉ'}`}
     >
-      <line x1="60" y1="18" x2="60" y2="30" stroke="#1F2140" strokeWidth="4" strokeLinecap="round" />
-      <circle className="antenna" cx="60" cy="14" r="7" fill="#FF7A9A" stroke="#1F2140" strokeWidth="3" />
-      <rect x="20" y="30" width="80" height="68" rx="26" fill="#6EC6FF" stroke="#1F2140" strokeWidth="4" />
-      <rect x="32" y="48" width="56" height="30" rx="14" fill="#1F2140" />
+      <path className="wisp" d="M40 84 Q60 112 80 84 Q72 104 60 108 Q48 104 40 84 Z" fill="#5BB8FF" stroke="#1F2140" strokeWidth="4" strokeLinejoin="round" />
+      <ellipse cx="60" cy="64" rx="30" ry="32" fill="#5BB8FF" stroke="#1F2140" strokeWidth="4" />
+      <path className="turban" d="M31 38 Q60 2 89 38 Q60 46 31 38 Z" fill="#FFD43B" stroke="#1F2140" strokeWidth="4" strokeLinejoin="round" />
+      <circle className="gem" cx="60" cy="28" r="5" fill="#FF7A9A" stroke="#1F2140" strokeWidth="2.5" />
       <g className="eyes">
-        <circle className="eye" cx="49" cy="63" r="6" fill="#FFD43B" />
-        <circle className="eye" cx="71" cy="63" r="6" fill="#FFD43B" />
+        <circle cx="49" cy="62" r="8" fill="#FFFFFF" stroke="#1F2140" strokeWidth="3" />
+        <circle cx="71" cy="62" r="8" fill="#FFFFFF" stroke="#1F2140" strokeWidth="3" />
+        <circle className="eye" cx="50" cy="63" r="4" fill="#1F2140" />
+        <circle className="eye" cx="72" cy="63" r="4" fill="#1F2140" />
       </g>
-      <path className="mouth" d="M50 86 Q60 92 70 86" fill="none" stroke="#1F2140" strokeWidth="4" strokeLinecap="round" />
-      <circle cx="28" cy="82" r="5" fill="#FF7A9A" opacity="0.8" />
-      <circle cx="92" cy="82" r="5" fill="#FF7A9A" opacity="0.8" />
-      <rect className="foot" x="36" y="98" width="18" height="10" rx="5" fill="#FFD43B" stroke="#1F2140" strokeWidth="3" />
-      <rect className="foot" x="66" y="98" width="18" height="10" rx="5" fill="#FFD43B" stroke="#1F2140" strokeWidth="3" />
+      <path className="mouth" d="M49 78 Q60 88 71 78" fill="none" stroke="#1F2140" strokeWidth="4" strokeLinecap="round" />
+      <circle cx="37" cy="74" r="4.5" fill="#FF7A9A" opacity="0.85" />
+      <circle cx="83" cy="74" r="4.5" fill="#FF7A9A" opacity="0.85" />
     </svg>
   );
 }

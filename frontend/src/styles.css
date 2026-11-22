@@ -428,19 +428,20 @@ button.danger { color: var(--bad); }
 }
 .auth-card h2 { font-family: var(--display); font-size: 24px; color: var(--ink); margin: 0 0 6px; text-align: center; }
 
-/* ----- Bo the mascot ----- */
+/* ----- Genie the mascot ----- */
 .mascot { overflow: visible; animation: bob 3.2s ease-in-out infinite; flex: none; }
-.mascot .antenna { transform-origin: 60px 14px; }
-.mascot .mouth { transform-origin: 60px 86px; transition: all 0.2s ease; }
+.mascot .gem { transform-origin: 60px 28px; }
+.mascot .mouth { transform-origin: 60px 80px; transition: all 0.2s ease; }
 .mascot .eye { transform-origin: center; transform-box: fill-box; }
-.mascot .foot { transform-origin: center; transform-box: fill-box; }
+.mascot .wisp { transform-origin: 60px 84px; }
 
-.mood-listening .antenna { animation: blink 0.9s steps(2, start) infinite; }
-.mood-listening .mouth { d: path("M52 86 Q60 84 68 86"); }
+.mood-listening .gem { animation: blink 0.9s steps(2, start) infinite; }
+.mood-listening .mouth { d: path("M53 79 Q60 77 67 79"); }
 .mood-thinking .eye { animation: look 1.6s ease-in-out infinite; }
 .mood-speaking .mouth { animation: talk 0.28s ease-in-out infinite alternate; }
+.mood-speaking .wisp { animation: sway 1.4s ease-in-out infinite; }
 .mood-happy { animation: hop 0.9s cubic-bezier(0.3, 1.6, 0.5, 1) 1; }
-.mood-happy .mouth { d: path("M48 84 Q60 98 72 84"); }
+.mood-happy .mouth { d: path("M46 76 Q60 94 74 76"); }
 
 /* ----- one orchestrated moment + ripple on action ----- */
 @keyframes pop-in {
@@ -452,6 +453,7 @@ button.danger { color: var(--bad); }
 @keyframes talk { from { transform: scaleY(1); } to { transform: scaleY(1.9); } }
 @keyframes look { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(3px); } }
 @keyframes hop { 0% { transform: translateY(0); } 40% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+@keyframes sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
 @keyframes ripple { 0% { transform: scale(0.9); opacity: 0.9; } 100% { transform: scale(1.5); opacity: 0; } }
 
 @media (prefers-reduced-motion: reduce) {
