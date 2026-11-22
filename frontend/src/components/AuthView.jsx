@@ -7,6 +7,7 @@ export default function AuthView({ onAuthed }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [remember, setRemember] = useState(() => localStorage.getItem('speakbot.remember') === '1');
 
   async function submit(e) {
     e.preventDefault();
@@ -22,7 +23,8 @@ export default function AuthView({ onAuthed }) {
       const token = makeToken(name, password);
       setToken(token);
       const me = await login(); // checks the credentials on the server
-      onAuthed({ username: me.username, token });
+      try { localStorage.setItem('speakbot.remember', remember ? '1' : '0'); } catch (e) { /* ignore */ }
+      onAuthed({ username: me.username, token }, remember);
     } catch (err) {
       setToken(null);
       setError(err.message);
@@ -43,6 +45,10 @@ export default function AuthView({ onAuthed }) {
           Mật khẩu
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
             autoComplete={mode === 'login' ? 'current-password' : 'new-password'} />
+        </label>
+        <label className="check">
+          <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
+          Ghi nhớ đăng nhập trên máy này
         </label>
         {error && <div className="status err">{error}</div>}
         <button type="submit" className="primary wide" disabled={busy}>

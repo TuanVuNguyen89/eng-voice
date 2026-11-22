@@ -11,18 +11,23 @@ import Mascot from './components/Mascot';
 const AUTH_KEY = 'speakbot.auth';
 const PREFS_KEY = 'speakbot.prefs.v2';
 
+// "Ghi nhớ" stores the login in localStorage (survives closing the browser).
+// Otherwise it lives in sessionStorage (this tab only).
 function loadAuth() {
-  try {
-    return JSON.parse(sessionStorage.getItem(AUTH_KEY) || 'null');
-  } catch (e) {
-    return null;
+  for (const store of [localStorage, sessionStorage]) {
+    try {
+      const saved = JSON.parse(store.getItem(AUTH_KEY) || 'null');
+      if (saved) return saved;
+    } catch (e) { /* storage blocked */ }
   }
+  return null;
 }
 
-function saveAuth(value) {
+function saveAuth(value, remember = false) {
   try {
-    if (value) sessionStorage.setItem(AUTH_KEY, JSON.stringify(value));
-    else sessionStorage.removeItem(AUTH_KEY);
+    localStorage.removeItem(AUTH_KEY);
+    sessionStorage.removeItem(AUTH_KEY);
+    if (value) (remember ? localStorage : sessionStorage).setItem(AUTH_KEY, JSON.stringify(value));
   } catch (e) { /* storage blocked: user logs in again after reload */ }
 }
 
@@ -60,8 +65,8 @@ export default function App() {
   if (!auth) {
     return (
       <AuthView
-        onAuthed={(a) => {
-          saveAuth(a);
+        onAuthed={(a, remember) => {
+          saveAuth(a, remember);
           setAuth(a);
         }}
       />
