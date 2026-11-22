@@ -6,7 +6,7 @@
 #     https://raw.githubusercontent.com/TuanVuNguyen89/eng-voice/main/deploy/vps-agent.sh -o vps-agent.sh
 #   bash vps-agent.sh install
 #
-# Cron runs "poll" every 5 minutes (installed automatically):
+# Cron runs "poll" every minute (installed automatically):
 #   checks the latest commit on main, waits until CI has pushed its images to Docker Hub,
 #   downloads docker-compose.prod.yml and this script at that commit, then deploys.
 set -euo pipefail
@@ -30,6 +30,27 @@ gh_get() {   # gh_get <url> [accept] -> stdout
   [ -n "$GH_TOKEN" ] && args+=(-H "Authorization: token $GH_TOKEN")
   [ -n "${2:-}" ] && args+=(-H "Accept: $2")
   curl "${args[@]}" "$1"
+}
+
+# Latest commit SHA on $BRANCH. Uses ETag so an unchanged branch returns 304,
+# which does not count against GitHub's unauthenticated rate limit (60 requests/hour).
+latest_sha() {
+  local hdr="$APP_DIR/.gh-headers" body="$APP_DIR/.gh-body"
+  local args=(-sS -D "$hdr" -o "$body" -w "%{http_code}" -H "Accept: application/vnd.github.sha")
+  [ -f "$APP_DIR/.gh-etag" ] && args+=(-H "If-None-Match: $(cat "$APP_DIR/.gh-etag")")
+  [ -n "$GH_TOKEN" ] && args+=(-H "Authorization: token $GH_TOKEN")
+  local code
+  code="$(curl "${args[@]}" "$API/commits/$BRANCH")" || return 1
+  case "$code" in
+    200)
+      tr -d '
+' < "$body" > "$APP_DIR/.gh-sha"
+      tr -d '
+' < <(grep -i '^etag:' "$hdr" | sed 's/^[Ee][Tt]ag: *//') > "$APP_DIR/.gh-etag"
+      cat "$APP_DIR/.gh-sha" ;;
+    304) cat "$APP_DIR/.gh-sha" ;;
+    *) return 1 ;;
+  esac
 }
 
 load_env() {
@@ -91,9 +112,9 @@ install_cmd() {
     log "CẢNH BÁO: port $port đang bị dùng, đổi APP_PORT trong .env"
   fi
 
-  local cron_line="*/5 * * * * bash $APP_DIR/vps-agent.sh poll >> $APP_DIR/deploy.log 2>&1"
+  local cron_line="* * * * * bash $APP_DIR/vps-agent.sh poll >> $APP_DIR/deploy.log 2>&1"
   ( crontab -l 2>/dev/null | grep -v "vps-agent.sh poll" || true; echo "$cron_line" ) | crontab -
-  log "đã bật cron: mỗi 5 phút"
+  log "đã bật cron: mỗi phút"
 
   poll_cmd
   log "cài đặt xong. Log: tail -f $APP_DIR/deploy.log"
@@ -113,7 +134,7 @@ poll_cmd() {
   : "${IMAGE_NAMESPACE:?thiếu IMAGE_NAMESPACE trong $ENV_FILE}"
 
   local latest deployed
-  if ! latest="$(gh_get "$API/commits/$BRANCH" application/vnd.github.sha 2>/dev/null)"; then
+  if ! latest="$(latest_sha)"; then
     log "không đọc được GitHub (repo private cần GH_TOKEN trong .env?)"
     exit 0
   fi

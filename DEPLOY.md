@@ -9,7 +9,7 @@ git push main
   └─ GitHub Actions (.github/workflows/deploy.yml)
        └─ build backend + frontend → docker.io/<user>/eng-voice-{backend,frontend}:<sha>, :latest
 
-VPS, cron mỗi 5 phút (/opt/eng-voice/vps-agent.sh poll)
+VPS, cron mỗi phút (/opt/eng-voice/vps-agent.sh poll)
   ├─ hỏi GitHub API: commit mới nhất trên main là gì?
   ├─ so với commit đã deploy; nếu khác và image của commit đó đã có trên Docker Hub
   └─ tải docker-compose.prod.yml đúng commit đó, compose pull, up -d, health check
@@ -20,7 +20,7 @@ Trình duyệt → Cloudflare (proxy, SSL Full strict)
            → 127.0.0.1:9120 (frontend) → backend / postgres / minio
 ```
 
-GitHub không truy cập VPS. VPS không cần git, chỉ cần curl để đọc GitHub và kéo image Docker Hub (image nên để Public).
+GitHub không truy cập VPS. Cron chạy mỗi phút, nhưng gọi GitHub bằng ETag nên commit không đổi thì không tốn giới hạn API. VPS không cần git, chỉ cần curl để đọc GitHub và kéo image Docker Hub (image nên để Public).
 
 ## Phần A. Docker Hub
 
@@ -54,6 +54,10 @@ Nếu sau này bạn muốn đặt env theo environment (ví dụ `production`),
 
 ## Phần C. VPS: cài đặt một lần (không cần git clone)
 
+**VPS đã cài trước đó (cron 5 phút):** đổi sang mỗi phút bằng một trong hai cách:
+- Chạy `crontab -e`, sửa `*/5 * * * *` thành `* * * * *` cho dòng `vps-agent.sh poll`.
+- Hoặc tải lại `vps-agent.sh` mới rồi chạy `bash vps-agent.sh install`. Lệnh này thay dòng cron cũ và không hỏi lại `.env`.
+
 Yêu cầu: VPS đã có Docker và `docker compose`, user hiện tại nằm trong nhóm `docker`, có `openssl` và `curl`.
 
 **Repo đang private**, nên VPS cần một token để tải file. Có hai cách, chọn một:
@@ -75,7 +79,7 @@ curl -fsSL https://raw.githubusercontent.com/TuanVuNguyen89/eng-voice/main/deplo
 bash vps-agent.sh install
 ```
 
-Script sẽ hỏi lần lượt: Docker Hub username, `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL`, `APP_PORT`, và `GH_TOKEN` (để trống nếu repo public). Nó tự tạo mật khẩu Postgres và MinIO ngẫu nhiên, tạo `/opt/eng-voice/.env`, bật cron mỗi 5 phút, rồi chạy deploy đầu tiên.
+Script sẽ hỏi lần lượt: Docker Hub username, `OPENAI_API_KEY`, `OPENAI_BASE_URL`, `OPENAI_MODEL`, `APP_PORT`, và `GH_TOKEN` (để trống nếu repo public). Nó tự tạo mật khẩu Postgres và MinIO ngẫu nhiên, tạo `/opt/eng-voice/.env`, bật cron mỗi phút, rồi chạy deploy đầu tiên.
 
 Kiểm tra:
 ```bash
@@ -83,7 +87,7 @@ tail -f /opt/eng-voice/deploy.log
 crontab -l
 ```
 
-Lần deploy đầu có thể báo "chưa có image" nếu CI chưa build xong. Khi đó cron sẽ tự thử lại sau 5 phút.
+Lần deploy đầu có thể báo "chưa có image" nếu CI chưa build xong. Khi đó cron sẽ tự thử lại sau 1 phút.
 
 ## Phần D. Nginx và Cloudflare
 
@@ -109,7 +113,7 @@ git push origin main
 ```
 
 1. Vào tab **Actions** trên GitHub, đợi job `build-images` xanh.
-2. Trên VPS, chờ tối đa 5 phút hoặc chạy tay: `bash /opt/eng-voice/vps-agent.sh poll`
+2. Trên VPS, chờ tối đa 1 phút hoặc chạy tay: `bash /opt/eng-voice/vps-agent.sh poll`
 3. Xem log: `tail -f ~/eng-voice-deploy.log`
 4. Mở https://eng.ntuanvu89.id.vn.
 
