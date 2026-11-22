@@ -11,7 +11,7 @@ import Mascot from './components/Mascot';
 const AUTH_KEY = 'speakbot.auth';
 const PREFS_KEY = 'speakbot.prefs.v2';
 
-// "Ghi nhớ" stores the login in localStorage (survives closing the browser).
+// "Remember me" stores the login in localStorage (survives closing the browser).
 // Otherwise it lives in sessionStorage (this tab only).
 function loadAuth() {
   for (const store of [localStorage, sessionStorage]) {
@@ -60,7 +60,7 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (checking) return <div className="auth"><p className="muted">Đang kiểm tra đăng nhập...</p></div>;
+  if (checking) return <div className="auth"><p className="muted">Checking sign-in...</p></div>;
 
   if (!auth) {
     return (
@@ -93,7 +93,7 @@ function Workspace({ username, onLogout }) {
   });
 
   useEffect(() => {
-    getTopics().then(setTopics).catch((e) => setError(`Không tải được chủ đề: ${e.message}`));
+    getTopics().then(setTopics).catch((e) => setError(`Could not load topics: ${e.message}`));
     getConfig().then(setConfig).catch(() => setConfig({ ai_enabled: false, model: '' }));
     const loadVoices = () => setVoices(englishVoices());
     loadVoices();
@@ -128,7 +128,7 @@ function Workspace({ username, onLogout }) {
       setFresh(true);
       setTab('chat');
     } catch (e) {
-      setError(`Không tạo được hội thoại: ${e.message}`);
+      setError(`Could not start a conversation: ${e.message}`);
     }
   }
 
@@ -150,24 +150,24 @@ function Workspace({ username, onLogout }) {
       <header>
         <div className="brand">
           <Mascot size={44} />
-          <h1 className="display">Luyện nói với Sao</h1>
+          <h1 className="display">Speak English with Sao</h1>
         </div>
         <nav className="tabs">
-          <button type="button" className={tab === 'chat' ? 'tab active' : 'tab'} onClick={() => setTab('chat')}>Trò chuyện</button>
-          <button type="button" className={tab === 'practice' ? 'tab active' : 'tab'} onClick={() => setTab('practice')}>Luyện câu</button>
-          <button type="button" className={tab === 'drill' ? 'tab active' : 'tab'} onClick={() => setTab('drill')}>Sửa lỗi</button>
-          <button type="button" className={tab === 'history' ? 'tab active' : 'tab'} onClick={() => setTab('history')}>Lịch sử</button>
+          <button type="button" className={tab === 'chat' ? 'tab active' : 'tab'} onClick={() => setTab('chat')}>Chat</button>
+          <button type="button" className={tab === 'practice' ? 'tab active' : 'tab'} onClick={() => setTab('practice')}>Practice</button>
+          <button type="button" className={tab === 'drill' ? 'tab active' : 'tab'} onClick={() => setTab('drill')}>Fix mistakes</button>
+          <button type="button" className={tab === 'history' ? 'tab active' : 'tab'} onClick={() => setTab('history')}>History</button>
         </nav>
         <div className="account">
           <span className="muted">{username}</span>
-          <button type="button" className="ghost" onClick={onLogout}>Đăng xuất</button>
+          <button type="button" className="ghost" onClick={onLogout}>Log out</button>
         </div>
       </header>
 
       <main className="layout">
         <aside className="panel">
           <section>
-            <h2>Chủ đề</h2>
+            <h2>Topics</h2>
             <div className="topics">
               {topics.map((t) => (
                 <button
@@ -183,29 +183,29 @@ function Workspace({ username, onLogout }) {
           </section>
 
           <section>
-            <h2>Giọng đọc</h2>
-            <select value={prefs.voiceName} onChange={(e) => update({ voiceName: e.target.value })} aria-label="Chọn giọng đọc">
-              <option value="">Giọng mặc định của trình duyệt</option>
+            <h2>Voice</h2>
+            <select value={prefs.voiceName} onChange={(e) => update({ voiceName: e.target.value })} aria-label="Choose voice">
+              <option value="">Browser default voice</option>
               {voices.map((v) => (
                 <option key={v.name} value={v.name}>{v.name} ({v.lang})</option>
               ))}
             </select>
             <label className="field">
-              Tốc độ: {Number(prefs.rate).toFixed(2)}
+              Speed: {Number(prefs.rate).toFixed(2)}
               <input type="range" min="0.6" max="1.3" step="0.05" value={prefs.rate} onChange={(e) => update({ rate: Number(e.target.value) })} />
             </label>
             <label className="check">
               <input type="checkbox" checked={prefs.autoListen} onChange={(e) => update({ autoListen: e.target.checked })} />
-              Tự động nghe sau khi bot nói xong
+              Listen automatically after Sao speaks
             </label>
           </section>
 
           <section>
             <h2>AI</h2>
             <p className="muted">
-              {config === null ? 'Đang kiểm tra...' : config.ai_enabled
-                ? 'Sao đang chấm lỗi ngữ pháp và phát âm cho bạn.'
-                : 'Sao đang hỏi theo kịch bản, chưa chấm lỗi.'}
+              {config === null ? 'Checking...' : config.ai_enabled
+                ? 'Sao checks your grammar and pronunciation.'
+                : 'Sao is using scripted questions, no grading yet.'}
             </p>
           </section>
         </aside>
@@ -216,7 +216,7 @@ function Workspace({ username, onLogout }) {
           {tab === 'chat' && topic && sessionId && (
             <>
               <div className="topic-info">
-                <div>Chủ đề: {topic.icon} {topic.name}. Từ vựng gợi ý:</div>
+                <div>Topic: {topic.icon} {topic.name}. Suggested words:</div>
                 <div className="chips">
                   {topic.words.map((w) => (
                     <button key={w} type="button" className="chip" onClick={() => speakWord(w)}>{w}</button>

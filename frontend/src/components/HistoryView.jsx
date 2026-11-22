@@ -47,10 +47,10 @@ export default function HistoryView({ voiceName, rate, onOpen }) {
   const dialog = (
     <ConfirmDialog
       open={!!pending}
-      title="Xoá hội thoại này?"
-      message="Toàn bộ câu nói, phản hồi và file ghi âm của cuộc trò chuyện sẽ bị xoá. Không thể khôi phục."
-      confirmLabel="Xoá vĩnh viễn"
-      cancelLabel="Giữ lại"
+      title="Delete this conversation?"
+      message="All messages, feedback and recordings in this conversation will be deleted. This cannot be undone."
+      confirmLabel="Delete forever"
+      cancelLabel="Keep it"
       danger
       onConfirm={confirmRemove}
       onCancel={() => setPending(null)}
@@ -62,13 +62,13 @@ export default function HistoryView({ voiceName, rate, onOpen }) {
     return (
       <div className="history">
         <div className="history-top">
-          <button type="button" className="ghost" onClick={() => setDetail(null)}>← Danh sách</button>
-          <button type="button" className="primary" onClick={() => onOpen(detail.id)}>Tiếp tục</button>
+          <button type="button" className="ghost" onClick={() => setDetail(null)}>← All conversations</button>
+          <button type="button" className="primary" onClick={() => onOpen(detail.id)}>Continue</button>
         </div>
         <header className="history-title">
           <span className="chip active">{detail.topic_name}</span>
-          <h3 className="display">{detail.title || 'Chưa có câu nói'}</h3>
-          <p className="muted">{new Date(detail.created_at).toLocaleString('vi-VN')} · {turns} lượt nói</p>
+          <h3 className="display">{detail.title || 'No messages yet'}</h3>
+          <p className="muted">{new Date(detail.created_at).toLocaleString('vi-VN')} · {turns} turns</p>
         </header>
 
         <div className="log transcript">
@@ -76,7 +76,7 @@ export default function HistoryView({ voiceName, rate, onOpen }) {
             <div key={m.id} className={`msg-row ${m.role}`}>
               {m.role === 'assistant' && <Mascot mood="idle" size={34} />}
               <div className="msg-col">
-                <span className="who">{m.role === 'user' ? 'Bạn' : 'Sao'}</span>
+                <span className="who">{m.role === 'user' ? 'You' : 'Sao'}</span>
                 <div className={`msg ${m.role}`}>
                   <p>{m.text}</p>
                   {m.audio_url && <AudioClip url={m.audio_url} />}
@@ -95,16 +95,16 @@ export default function HistoryView({ voiceName, rate, onOpen }) {
   return (
     <div className="history">
       <div className="history-top">
-        <h3 className="display">Lịch sử hội thoại</h3>
-        <span className="muted">{sessions.length} cuộc trò chuyện</span>
+        <h3 className="display">Conversation history</h3>
+        <span className="muted">{sessions.length} conversations</span>
       </div>
       {error && <div className="status err">{error}</div>}
-      {loading && <p className="muted">Đang tải...</p>}
+      {loading && <p className="muted">Loading...</p>}
       {!loading && sessions.length === 0 && (
         <div className="empty">
           <Mascot mood="idle" size={72} />
-          <p className="display">Chưa có cuộc trò chuyện nào.</p>
-          <p className="muted">Nói với Sao ít nhất một câu, cuộc trò chuyện sẽ được lưu ở đây.</p>
+          <p className="display">No conversations yet.</p>
+          <p className="muted">Say at least one sentence to Sao and the conversation will be saved here.</p>
         </div>
       )}
       <ul className="session-list">
@@ -112,12 +112,12 @@ export default function HistoryView({ voiceName, rate, onOpen }) {
           <li key={s.id} className="session-row">
             <button type="button" className="session-item" onClick={() => openDetail(s.id)}>
               <span className="chip">{s.topic_name}</span>
-              <b>{s.title || 'Chưa có câu nói'}</b>
+              <b>{s.title || 'No messages yet'}</b>
               <small className="muted">
-                {new Date(s.created_at).toLocaleString('vi-VN')} · {s.message_count} tin nhắn
+                {new Date(s.created_at).toLocaleString('vi-VN')} · {s.message_count} messages
               </small>
             </button>
-            <button type="button" className="ghost danger" onClick={() => setPending(s.id)}>Xoá</button>
+            <button type="button" className="ghost danger" onClick={() => setPending(s.id)}>Delete</button>
           </li>
         ))}
       </ul>

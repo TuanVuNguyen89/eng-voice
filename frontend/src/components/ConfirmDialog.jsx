@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 // Comic-style confirmation dialog (replaces the browser's window.confirm).
-export default function ConfirmDialog({ open, title, message, confirmLabel = 'Xác nhận', cancelLabel = 'Huỷ', danger = false, onConfirm, onCancel }) {
+export default function ConfirmDialog({ open, title, message, confirmLabel = 'Confirm', cancelLabel = 'Cancel', danger = false, onConfirm, onCancel }) {
   const confirmRef = useRef(null);
   const cancelRef = useRef(null);
 

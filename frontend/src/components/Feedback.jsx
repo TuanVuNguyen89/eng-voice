@@ -7,11 +7,11 @@ export default function Feedback({ feedback, voiceName, rate }) {
 
   return (
     <div className="feedback">
-      <div className="score">Điểm: {score ?? '—'}/100</div>
+      <div className="score">Score: {score ?? '—'}/100</div>
 
       {corrections.length > 0 && (
         <>
-          <h4>Sửa lỗi</h4>
+          <h4>Corrections</h4>
           <ul>
             {corrections.map((c, i) => (
               <li key={i}>
@@ -25,12 +25,12 @@ export default function Feedback({ feedback, voiceName, rate }) {
 
       {tips.length > 0 && (
         <>
-          <h4>Gợi ý phát âm: những từ bạn đang phát âm chưa đúng</h4>
+          <h4>Pronunciation tips: words you are saying incorrectly</h4>
           <ul>
             {tips.map((t, i) => (
               <li key={i}>
                 <b>{t.word}</b> — {t.tip}
-                <button type="button" className="say" title="Nghe từ mẫu" onClick={() => speak(t.word, { voiceName, rate })}>
+                <button type="button" className="say" title="Listen to the model word" onClick={() => speak(t.word, { voiceName, rate })}>
                   🔊
                 </button>
               </li>
@@ -39,7 +39,7 @@ export default function Feedback({ feedback, voiceName, rate }) {
         </>
       )}
 
-      {corrections.length === 0 && tips.length === 0 && <div className="muted">Câu nói rất ổn!</div>}
+      {corrections.length === 0 && tips.length === 0 && <div className="muted">Nicely said!</div>}
     </div>
   );
 }

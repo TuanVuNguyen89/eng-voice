@@ -1,4 +1,5 @@
 import json
+import random
 import uuid
 from pathlib import Path
 
@@ -20,7 +21,7 @@ TOPIC_BY_ID = {t["id"]: t for t in TOPICS}
 ACK = ["Nice!", "Got it.", "Interesting!", "Thanks for sharing."]
 MAX_AUDIO_BYTES = 15 * 1024 * 1024
 
-app = FastAPI(title="Luyện nói tiếng Anh API")
+app = FastAPI(title="Speak English API")
 
 
 @app.on_event("startup")
@@ -73,7 +74,7 @@ def load_owned_session(db: DBSession, session_id: uuid.UUID, user: User, with_me
         query = query.options(selectinload(Session.messages))
     s = db.execute(query).scalar_one_or_none()
     if not s:
-        raise HTTPException(404, "Không tìm thấy hội thoại")
+        raise HTTPException(404, "Conversation not found")
     return s
 
 
@@ -89,7 +90,7 @@ def register(body: Credentials, db: DBSession = Depends(get_db)):
     username = body.username.strip()
     validate_new_account(username, body.password)
     if db.scalar(select(User).where(User.username == username)):
-        raise HTTPException(409, "Tên đăng nhập đã tồn tại")
+        raise HTTPException(409, "That username is already taken")
     db.add(User(username=username, password_hash=hash_password(body.password)))
     db.commit()
     return {"username": username}
@@ -163,11 +164,13 @@ def list_sessions(user: User = Depends(current_user), db: DBSession = Depends(ge
 def create_session(body: CreateSession, user: User = Depends(current_user), db: DBSession = Depends(get_db)):
     topic = TOPIC_BY_ID.get(body.topic_id)
     if not topic:
-        raise HTTPException(404, "Không có chủ đề này")
+        raise HTTPException(404, "No such topic")
     s = Session(user_id=user.id, topic_id=topic["id"], title="")
     db.add(s)
     db.flush()
-    db.add(Message(session_id=s.id, role="assistant", text=topic["starter"]))
+    # A different opening question each time; the first entry is the default.
+    opening = random.choice(topic.get("starters") or [topic["starter"]])
+    db.add(Message(session_id=s.id, role="assistant", text=opening))
     db.commit()
     db.refresh(s)
     return session_out(s)
@@ -203,7 +206,7 @@ def add_turn(
     s = load_owned_session(db, session_id, user)
     text = text.strip()
     if not text:
-        raise HTTPException(400, "Câu nói trống")
+        raise HTTPException(400, "The sentence is empty")
 
     topic = TOPIC_BY_ID.get(s.topic_id, TOPICS[0])
     user_msg = Message(session_id=s.id, role="user", text=text)
@@ -213,7 +216,7 @@ def add_turn(
     if audio is not None:
         data = audio.file.read(MAX_AUDIO_BYTES + 1)
         if len(data) > MAX_AUDIO_BYTES:
-            raise HTTPException(413, "File ghi âm quá lớn")
+            raise HTTPException(413, "The recording is too large")
         if data:
             key = f"{s.id}/{user_msg.id}"
             storage.put_audio(key, data, audio.content_type or "audio/webm")
@@ -229,7 +232,8 @@ def add_turn(
 
     try:
         if settings.openai_api_key:
-            out = chat(history, topic["name"], topic["starter"])
+            opening_line = next((m.text for m in s.messages if m.role == "assistant"), topic["starter"])
+            out = chat(history, topic["name"], opening_line)
         else:
             turn_index = sum(1 for m in s.messages if m.role == "assistant")
             out = {"reply": offline_reply(topic, turn_index), "feedback": None}
@@ -251,13 +255,13 @@ def get_audio(key: str, user: User = Depends(current_user), db: DBSession = Depe
     try:
         session_id = uuid.UUID(key.split("/", 1)[0])
     except ValueError as exc:
-        raise HTTPException(404, "Không có file ghi âm") from exc
+        raise HTTPException(404, "Recording not found") from exc
     load_owned_session(db, session_id, user, with_messages=False)
 
     try:
         obj = storage.get_audio(key)
     except Exception as exc:  # noqa: BLE001
-        raise HTTPException(404, "Không có file ghi âm") from exc
+        raise HTTPException(404, "Recording not found") from exc
 
     def stream():
         try:

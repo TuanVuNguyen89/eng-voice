@@ -25,6 +25,6 @@ export default function AudioClip({ url }) {
   }, [url]);
 
   if (error) return <small className="err-text">{error}</small>;
-  if (!src) return <small className="muted">đang tải ghi âm...</small>;
+  if (!src) return <small className="muted">loading recording...</small>;
   return <audio controls src={src} className="rec" />;
 }

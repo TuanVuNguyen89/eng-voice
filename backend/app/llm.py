@@ -17,7 +17,7 @@ Review the learner's LAST message and return ONLY a JSON object with this shape:
 {{"reply": string, "score": integer 0-100 (overall clarity and grammar of the last message),
  "corrections": [{{"said": string, "better": string, "why": string}}],
  "pronunciation_tips": [{{"word": string, "tip": string}}]}}
-Write "why" and "tip" in Vietnamese and keep them short. Use empty arrays if nothing needs fixing."""
+Write "why" and "tip" in English, short and simple. Use empty arrays if nothing needs fixing."""
 
 
 def _normalize(data: dict) -> dict:
@@ -36,7 +36,7 @@ def _normalize(data: dict) -> dict:
 def chat(history: list[dict], topic_name: str, starter: str) -> dict:
     """history: [{"role": "user"|"assistant", "content": str}], last item is the learner's newest message."""
     if not settings.openai_api_key:
-        raise LLMError("Server chưa có OPENAI_API_KEY")
+        raise LLMError("The server has no OPENAI_API_KEY")
 
     body = {
         "model": settings.openai_model,
@@ -55,13 +55,13 @@ def chat(history: list[dict], topic_name: str, starter: str) -> dict:
                 json=body,
             )
     except httpx.HTTPError as exc:
-        raise LLMError(f"Không kết nối được AI: {exc}") from exc
+        raise LLMError(f"Could not reach the AI service: {exc}") from exc
 
     if res.status_code >= 400:
-        raise LLMError(f"Lỗi API {res.status_code}: {res.text[:200]}")
+        raise LLMError(f"API error {res.status_code}: {res.text[:200]}")
 
     try:
         content = res.json()["choices"][0]["message"]["content"]
         return _normalize(json.loads(content))
     except (KeyError, IndexError, ValueError, TypeError) as exc:
-        raise LLMError("AI trả về dữ liệu không đúng định dạng") from exc
+        raise LLMError("The AI returned an unexpected format") from exc

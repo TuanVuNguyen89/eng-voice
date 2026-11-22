@@ -6,10 +6,10 @@ import Feedback from './Feedback';
 import Mascot from './Mascot';
 
 const STATUS_TEXT = {
-  idle: 'Nhấn 🎤 để bắt đầu nói.',
-  listening: '🎙️ Đang nghe. Cứ nói tự nhiên; ngừng khoảng 2 giây bot sẽ trả lời (ngừng lâu hơn nếu câu đang dở).',
-  thinking: '⏳ Bot đang trả lời...',
-  speaking: '🔊 Bot đang nói. Micro tạm tắt để không tự nghe giọng bot.',
+  idle: 'Tap 🎤 to start talking.',
+  listening: '🎙️ Listening. Speak naturally; Sao answers after about 2 seconds of silence (longer if your sentence trails off).',
+  thinking: '⏳ Sao is replying...',
+  speaking: '🔊 Sao is speaking. The mic is paused so it does not hear itself.',
 };
 
 export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen }) {
@@ -133,7 +133,7 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
     setError('');
     setLive('');
     if (!hasRecognition()) {
-      setError('Trình duyệt không hỗ trợ nhận giọng nói. Hãy dùng Chrome hoặc Edge, hoặc gõ câu bên dưới.');
+      setError('This browser does not support voice input. Use Chrome or Edge, or type below.');
       return;
     }
     turnRef.current += 1;
@@ -144,7 +144,7 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
         onFinal: (t) => handleFinal(t),
         onError: (e) => {
           if (!alive.current) return;
-          setError(`Lỗi micro: ${e}`);
+          setError(`Microphone error: ${e}`);
           setPhase('idle');
           setLive('');
         },
@@ -187,7 +187,7 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
     } catch (e) {
       if (!alive.current) return;
       setMessages((m) => m.map((x) => (x.id === tempId ? { ...x, pending: false, failed: true } : x)));
-      setError(`${e.message} (câu của bạn chưa được lưu. Hãy thử lại.)`);
+      setError(`${e.message} (your message was not saved. Please try again.)`);
       setPhase('idle');
     }
   }
@@ -240,7 +240,7 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
           <div key={m.id} className={`msg-row ${m.role}`}>
             {m.role === 'assistant' && <Mascot mood="idle" size={36} />}
             <div className="msg-col">
-              <span className="who">{m.role === 'user' ? 'Bạn' : 'Sao'}</span>
+              <span className="who">{m.role === 'user' ? 'You' : 'Sao'}</span>
               <div className={`msg ${m.role}${m.failed ? ' failed' : ''}`}>
                 <p>{m.text}</p>
                 {(m.role === 'assistant' || m.audio_url || m.pending || m.failed) && (
@@ -251,12 +251,12 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
                         className="say listen"
                         onClick={() => speak(m.text, { voiceName: voiceRef.current, rate: rateRef.current })}
                       >
-                        🔊 Nghe lại
+                        🔊 Replay
                       </button>
                     )}
                     {m.audio_url && <AudioClip url={m.audio_url} />}
-                    {m.pending && <small className="muted">đang gửi...</small>}
-                    {m.failed && <small className="err-text">chưa lưu</small>}
+                    {m.pending && <small className="muted">sending...</small>}
+                    {m.failed && <small className="err-text">not saved</small>}
                   </div>
                 )}
               </div>
@@ -269,7 +269,7 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
         {phase === 'listening' && live && (
           <div className="msg-row user">
             <div className="msg-col">
-              <span className="who">Bạn</span>
+              <span className="who">You</span>
               <div className="msg user live-text"><p>{live}</p></div>
             </div>
           </div>
@@ -291,22 +291,22 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
           className={`mic ${phase === 'listening' ? 'live' : ''}`}
           onClick={handleMicButton}
           disabled={micDisabled}
-          title={phase === 'listening' ? 'Gửi câu ngay' : 'Nói'}
+          title={phase === 'listening' ? 'Send now' : 'Speak'}
         >
           {phase === 'listening' ? '⏎' : '🎤'}
         </button>
         {(phase === 'listening' || phase === 'speaking') && (
-          <button type="button" className="ghost" onClick={handleStop}>⏹ Dừng</button>
+          <button type="button" className="ghost" onClick={handleStop}>⏹ Stop</button>
         )}
         <form className="composer" onSubmit={handleTypedSubmit}>
           <input
             value={typed}
             onChange={(e) => setTyped(e.target.value)}
-            placeholder="Hoặc gõ tiếng Anh ở đây..."
-            aria-label="Nhập câu tiếng Anh"
+            placeholder="Or type English here..."
+            aria-label="Type an English sentence"
             disabled={phase === 'thinking'}
           />
-          <button type="submit" disabled={phase === 'thinking' || !typed.trim()}>Gửi</button>
+          <button type="submit" disabled={phase === 'thinking' || !typed.trim()}>Send</button>
         </form>
       </div>
     </div>

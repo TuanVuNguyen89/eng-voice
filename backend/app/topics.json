@@ -20,44 +20,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "nguyên âm dài /iː/",
+        "focus": "long vowel /iː/",
         "text": "I usually wake up at seven and have a quick breakfast."
       },
       {
         "level": 1,
-        "focus": "âm cuối /t/",
+        "focus": "final /t/ sound",
         "text": "I catch the bus at eight thirty every morning."
       },
       {
         "level": 1,
-        "focus": "trọng âm từ 'commute'",
+        "focus": "stress in 'commute'",
         "text": "My commute takes about forty minutes by train."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'the' và 'this'",
+        "focus": "/ð/ in 'the' and 'this'",
         "text": "Before I leave, I always check the weather and grab my keys."
       },
       {
         "level": 2,
-        "focus": "nối âm 'get up'",
+        "focus": "linking in 'get up'",
         "text": "On weekdays I get up earlier than I do on weekends, but I rarely feel rested."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ trong 'think'",
+        "focus": "/θ/ in 'think'",
         "text": "I think a good routine makes the whole day feel more organized."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'strengths'",
+        "focus": "consonant cluster in 'strengths'",
         "text": "Honestly, keeping a strict schedule sometimes drains my energy more than it helps."
       },
       {
         "level": 3,
-        "focus": "âm /r/ và /l/",
+        "focus": "/r/ and /l/ sounds",
         "text": "Right after lunch, I usually recharge by reading a few pages of a novel."
       }
+    ],
+    "starters": [
+      "What does a typical morning look like for you?",
+      "How do you usually start your day?",
+      "What is the first thing you do after you wake up?",
+      "Are you a morning person or a night owl?"
     ]
   },
   {
@@ -81,44 +87,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /p/ bật hơi",
+        "focus": "/p/ with a puff of air",
         "text": "My favorite dish is pho, especially with extra herbs."
       },
       {
         "level": 1,
-        "focus": "âm /ʃ/ trong 'fish'",
+        "focus": "/ʃ/ in 'fish'",
         "text": "I usually order fish soup when I eat out."
       },
       {
         "level": 1,
-        "focus": "âm /tʃ/ trong 'chicken'",
+        "focus": "/tʃ/ in 'chicken'",
         "text": "Grilled chicken with rice is my go-to lunch."
       },
       {
         "level": 2,
-        "focus": "âm /v/ và /w/",
+        "focus": "/v/ and /w/ sounds",
         "text": "We were very excited to try the new vegetarian restaurant downtown."
       },
       {
         "level": 2,
-        "focus": "nối âm 'cook at home'",
+        "focus": "linking in 'cook at home'",
         "text": "I enjoy cooking at home because I can control what goes into my food."
       },
       {
         "level": 2,
-        "focus": "âm /ɪ/ và /iː/ trong 'ship' và 'sheep'",
+        "focus": "/ɪ/ vs /iː/ in 'ship' and 'sheep'",
         "text": "The seafood was fresh, and the shrimp tasted like it had just been caught."
       },
       {
         "level": 3,
-        "focus": "trọng âm câu hỏi",
+        "focus": "stress in a question",
         "text": "Would you rather have something spicy, or would you prefer a milder flavor tonight?"
       },
       {
         "level": 3,
-        "focus": "âm /θ/ và /ð/ trong 'thoroughly'",
+        "focus": "/θ/ and /ð/ in 'thoroughly'",
         "text": "I thoroughly enjoyed the smooth texture of the homemade soup."
       }
+    ],
+    "starters": [
+      "What is your favorite dish, and how would you describe its taste?",
+      "What did you eat for breakfast today?",
+      "Do you enjoy cooking, or do you prefer eating out?",
+      "What is the best meal you have ever had?"
     ]
   },
   {
@@ -142,44 +154,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /æ/ trong 'Japan'",
+        "focus": "/æ/ in 'Japan'",
         "text": "I would love to travel to Japan someday."
       },
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'time'",
+        "focus": "/aɪ/ in 'time'",
         "text": "This is my first time visiting a foreign country."
       },
       {
         "level": 1,
-        "focus": "trọng âm 'passport'",
+        "focus": "stress in 'passport'",
         "text": "Please don't forget your passport when you check in."
       },
       {
         "level": 2,
-        "focus": "âm /ŋ/ cuối từ 'long'",
+        "focus": "final /ŋ/ in 'long'",
         "text": "The flight was long, but the views from the window were worth it."
       },
       {
         "level": 2,
-        "focus": "nối âm 'turn off'",
+        "focus": "linking in 'turn off'",
         "text": "Before we land, the crew will ask everyone to turn off their phones."
       },
       {
         "level": 2,
-        "focus": "âm /s/ và /z/ trong 'sees' và 'seas'",
+        "focus": "/s/ vs /z/ in 'sees' and 'seas'",
         "text": "From the hotel room, you can see the sea and the old town at sunset."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'sixth'",
+        "focus": "consonant cluster in 'sixth'",
         "text": "We spent the sixth day exploring hidden streets and tiny family-run cafés."
       },
       {
         "level": 3,
-        "focus": "trọng âm 'accommodation'",
+        "focus": "stress in 'accommodation'",
         "text": "We found affordable accommodation close to the city center, which saved us a lot of time."
       }
+    ],
+    "starters": [
+      "Where would you love to travel next, and why?",
+      "What is the most memorable trip you have ever taken?",
+      "Do you prefer relaxing beach holidays or busy city breaks?",
+      "What is one thing you always pack when you travel?"
     ]
   },
   {
@@ -203,44 +221,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ɜː/ trong 'work'",
+        "focus": "/ɜː/ in 'work'",
         "text": "I work as an accountant at a small company."
       },
       {
         "level": 1,
-        "focus": "âm /dʒ/ trong 'job'",
+        "focus": "/dʒ/ in 'job'",
         "text": "My job is busy, but I enjoy it."
       },
       {
         "level": 1,
-        "focus": "trọng âm 'colleague'",
+        "focus": "stress in 'colleague'",
         "text": "My colleagues are friendly and always willing to help."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'they' và 'other'",
+        "focus": "/ð/ in 'they' and 'other'",
         "text": "They asked me to lead the project because I understand the other departments."
       },
       {
         "level": 2,
-        "focus": "nối âm 'set up'",
+        "focus": "linking in 'set up'",
         "text": "We set up a meeting every Monday to plan the week ahead."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ trong 'thing'",
+        "focus": "/θ/ in 'thing'",
         "text": "The most important thing is to meet the deadline without sacrificing quality."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'projects'",
+        "focus": "consonant cluster in 'projects'",
         "text": "Although the projects were demanding, the team managed to finish them on schedule."
       },
       {
         "level": 3,
-        "focus": "âm /r/ trong 'responsibility'",
+        "focus": "/r/ in 'responsibility'",
         "text": "Taking responsibility for mistakes is something I really respect in a leader."
       }
+    ],
+    "starters": [
+      "What do you do for work, and what do you enjoy most about it?",
+      "What does a normal workday look like for you?",
+      "What skill do you think is most important in your job?",
+      "Would you like to change your job someday?"
     ]
   },
   {
@@ -264,44 +288,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'I' và 'like'",
+        "focus": "/aɪ/ in 'I' and 'like'",
         "text": "I like solving problems and working with people."
       },
       {
         "level": 1,
-        "focus": "trọng âm 'experience'",
+        "focus": "stress in 'experience'",
         "text": "I have three years of experience in customer service."
       },
       {
         "level": 1,
-        "focus": "âm /w/ trong 'why'",
+        "focus": "/w/ in 'why'",
         "text": "Why do you want to work for our company?"
       },
       {
         "level": 2,
-        "focus": "nối âm 'look forward to'",
+        "focus": "linking in 'look forward to'",
         "text": "I look forward to contributing to a team that values innovation."
       },
       {
         "level": 2,
-        "focus": "âm /ʌ/ trong 'strength'",
+        "focus": "/ʌ/ in 'strength'",
         "text": "One of my greatest strengths is staying calm under pressure."
       },
       {
         "level": 2,
-        "focus": "âm /v/ và /b/ trong 'very' và 'berry'",
+        "focus": "/v/ vs /b/ in 'very' and 'berry'",
         "text": "I have worked on several projects that required very careful planning."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'achievement'",
+        "focus": "consonant cluster in 'achievement'",
         "text": "My biggest achievement was improving our team's productivity by twenty percent in one year."
       },
       {
         "level": 3,
-        "focus": "âm /ɪ/ 'development'",
+        "focus": "/ɪ/ in 'development'",
         "text": "I believe continuous development is essential if I want to grow in this role."
       }
+    ],
+    "starters": [
+      "Tell me a little about yourself and why you want this job.",
+      "What is your greatest strength?",
+      "Tell me about a time you faced a difficult challenge at work.",
+      "Where do you see yourself in three years?"
     ]
   },
   {
@@ -325,44 +355,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /m/ và /n/",
+        "focus": "/m/ and /n/ sounds",
         "text": "Could I see the menu, please?"
       },
       {
         "level": 1,
-        "focus": "âm /ɔː/ trong 'order'",
+        "focus": "/ɔː/ in 'order'",
         "text": "I'd like to order the grilled salmon, please."
       },
       {
         "level": 1,
-        "focus": "âm /k/ trong 'coffee'",
+        "focus": "/k/ in 'coffee'",
         "text": "Could I have a cup of coffee with no sugar?"
       },
       {
         "level": 2,
-        "focus": "nối âm 'a glass of'",
+        "focus": "linking in 'a glass of'",
         "text": "Could I get a glass of water and a side of fries, please?"
       },
       {
         "level": 2,
-        "focus": "âm /θ/ trong 'through'",
+        "focus": "/θ/ in 'through'",
         "text": "Does this dish come with vegetables or is it served through a separate plate?"
       },
       {
         "level": 2,
-        "focus": "âm câu hỏi lên giọng",
+        "focus": "rising intonation in questions",
         "text": "Is the soup spicy, or is it mild enough for children?"
       },
       {
         "level": 3,
-        "focus": "trọng âm 'recommend'",
+        "focus": "stress in 'recommend'",
         "text": "Could you recommend something light that isn't too heavy for lunch?"
       },
       {
         "level": 3,
-        "focus": "âm /ŋ/ 'ordering'",
+        "focus": "/ŋ/ in 'ordering'",
         "text": "We're still deciding, so we'll let you know when we're ready to start ordering."
       }
+    ],
+    "starters": [
+      "Hi, welcome! Are you ready to order, or do you need a few more minutes?",
+      "Would you like to start with something to drink?",
+      "Do you have any food allergies I should know about?",
+      "What can I recommend tonight? Our soup is very popular."
     ]
   },
   {
@@ -386,44 +422,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /θ/ trong 'thank'",
+        "focus": "/θ/ in 'thank'",
         "text": "Thank you so much for your help."
       },
       {
         "level": 1,
-        "focus": "âm /n/ trong 'next'",
+        "focus": "/n/ in 'next'",
         "text": "The station is next to the bank."
       },
       {
         "level": 1,
-        "focus": "âm /tʃ/ trong 'church'",
+        "focus": "/tʃ/ in 'church'",
         "text": "Turn left at the church and keep walking straight."
       },
       {
         "level": 2,
-        "focus": "nối âm 'turn around'",
+        "focus": "linking in 'turn around'",
         "text": "If you go past the bridge, you'll need to turn around and come back."
       },
       {
         "level": 2,
-        "focus": "âm /ɪ/ trong 'across from'",
+        "focus": "/ɪ/ in 'across from'",
         "text": "The café is across from the park, on the corner."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'directions'",
+        "focus": "stress in 'directions'",
         "text": "Could you give me directions to the nearest subway station?"
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'straight'",
+        "focus": "consonant cluster in 'straight'",
         "text": "Go straight ahead for about three blocks, then the entrance is on your right."
       },
       {
         "level": 3,
-        "focus": "âm /w/ và /r/ trong 'right' và 'wrong'",
+        "focus": "/w/ vs /r/ in 'right' and 'wrong'",
         "text": "I think I'm going the wrong way, so I'd like to check the right route on the map."
       }
+    ],
+    "starters": [
+      "Excuse me, could you tell me how to get to the nearest train station?",
+      "Do you know where the closest post office is?",
+      "I'm a little lost. Can you help me find the city center?",
+      "Is it far from here, or can I walk there?"
     ]
   },
   {
@@ -447,44 +489,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /h/ trong 'headache'",
+        "focus": "/h/ in 'headache'",
         "text": "I have a headache and I feel tired."
       },
       {
         "level": 1,
-        "focus": "âm /f/ trong 'fever'",
+        "focus": "/f/ in 'fever'",
         "text": "I've had a fever since last night."
       },
       {
         "level": 1,
-        "focus": "trọng âm 'appointment'",
+        "focus": "stress in 'appointment'",
         "text": "I'd like to make an appointment for next Tuesday."
       },
       {
         "level": 2,
-        "focus": "âm /ʃ/ trong 'should'",
+        "focus": "/ʃ/ in 'should'",
         "text": "Should I take this medicine before or after meals?"
       },
       {
         "level": 2,
-        "focus": "nối âm 'in the morning'",
+        "focus": "linking in 'in the morning'",
         "text": "The pain gets worse in the morning, and sometimes it lasts all day."
       },
       {
         "level": 2,
-        "focus": "âm cuối /d/ và /t/ trong 'tired' và 'tide'",
+        "focus": "final /d/ and /t/ in 'tired' and 'tide'",
         "text": "I've been feeling tired for about two weeks, and I can't sleep well."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'prescription'",
+        "focus": "consonant cluster in 'prescription'",
         "text": "Could you write me a prescription, and let me know how often I should take the tablets?"
       },
       {
         "level": 3,
-        "focus": "âm /θ/ 'month'",
+        "focus": "/θ/ in 'month'",
         "text": "It's been on and off for a month, and it seems to get worse when I stand up."
       }
+    ],
+    "starters": [
+      "Hello, what seems to be the problem today?",
+      "How long have you been feeling this way?",
+      "Do you have any allergies to medicine?",
+      "Have you had any other symptoms recently?"
     ]
   },
   {
@@ -508,44 +556,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ʃ/ trong 'shop'",
+        "focus": "/ʃ/ in 'shop'",
         "text": "I usually shop on weekends."
       },
       {
         "level": 1,
-        "focus": "âm /aʊ/ trong 'brown'",
+        "focus": "/aʊ/ in 'brown'",
         "text": "Do you have this shirt in brown?"
       },
       {
         "level": 1,
-        "focus": "trọng âm 'receipt'",
+        "focus": "stress in 'receipt'",
         "text": "Can I have a receipt, please?"
       },
       {
         "level": 2,
-        "focus": "nối âm 'try it on'",
+        "focus": "linking in 'try it on'",
         "text": "Can I try it on before I decide to buy it?"
       },
       {
         "level": 2,
-        "focus": "âm /ɪ/ 'discount'",
+        "focus": "/ɪ/ in 'discount'",
         "text": "Is there a discount if I buy two of these?"
       },
       {
         "level": 2,
-        "focus": "âm /æ/ trong 'bag' và 'back'",
+        "focus": "/æ/ in 'bag' and 'back'",
         "text": "I'd like a bag to carry these back home."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'refund'",
+        "focus": "consonant cluster in 'refund'",
         "text": "If the size doesn't fit, can I get a refund or exchange it for a different one?"
       },
       {
         "level": 3,
-        "focus": "âm /ə/ trong 'comfortable'",
+        "focus": "schwa in 'comfortable'",
         "text": "I'm looking for something comfortable but still stylish for everyday wear."
       }
+    ],
+    "starters": [
+      "Do you prefer shopping online or in physical stores? Why?",
+      "What was the last thing you bought that you really liked?",
+      "Do you usually look for discounts before you buy something?",
+      "What is the hardest thing to shop for?"
     ]
   },
   {
@@ -569,44 +623,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /h/ trong 'hobby'",
+        "focus": "/h/ in 'hobby'",
         "text": "My hobby is painting, and I paint on weekends."
       },
       {
         "level": 1,
-        "focus": "âm /iː/ 'free time'",
+        "focus": "long vowel in 'free time'",
         "text": "In my free time, I like to read and take long walks."
       },
       {
         "level": 1,
-        "focus": "âm /ɒ/ trong 'hobby'",
+        "focus": "/ɒ/ in 'hobby'",
         "text": "I'm not very good, but I really enjoy it."
       },
       {
         "level": 2,
-        "focus": "nối âm 'take up'",
+        "focus": "linking in 'take up'",
         "text": "I've recently taken up photography, so I go out early to find good light."
       },
       {
         "level": 2,
-        "focus": "âm /ɜː/ trong 'learn'",
+        "focus": "/ɜː/ in 'learn'",
         "text": "I'd like to learn to play the guitar, but I need more time to practice."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ 'theater'",
+        "focus": "/θ/ in 'theater'",
         "text": "I go to the theater once a month with my friends."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'sculpture'",
+        "focus": "consonant cluster in 'sculpture'",
         "text": "Last year I started a pottery class, and now I make small sculptures for my family."
       },
       {
         "level": 3,
-        "focus": "trọng âm 'collection'",
+        "focus": "stress in 'collection'",
         "text": "I started a stamp collection as a child, and I still add new pieces whenever I travel."
       }
+    ],
+    "starters": [
+      "What do you like to do in your free time?",
+      "Have you picked up any new hobbies this year?",
+      "What hobby would you like to learn if you had more time?",
+      "Do you prefer hobbies you do alone or with other people?"
     ]
   },
   {
@@ -630,44 +690,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ɔː/ trong 'more'",
+        "focus": "/ɔː/ in 'more'",
         "text": "I watched a movie last night, and it was great."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'film'",
+        "focus": "/ɪ/ in 'film'",
         "text": "My favorite film is a comedy about a family road trip."
       },
       {
         "level": 1,
-        "focus": "âm /tʃ/ trong 'character'",
+        "focus": "/tʃ/ in 'character'",
         "text": "The main character is funny and very kind."
       },
       {
         "level": 2,
-        "focus": "nối âm 'end up'",
+        "focus": "linking in 'end up'",
         "text": "The ending was surprising, and I didn't expect the story to end up like that."
       },
       {
         "level": 2,
-        "focus": "âm /ʒ/ trong 'vision'",
+        "focus": "/ʒ/ in 'vision'",
         "text": "The visual effects were amazing, and the music fit every scene perfectly."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'recommend'",
+        "focus": "stress in 'recommend'",
         "text": "Would you recommend this series to someone who likes thrillers?"
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'thoughtful'",
+        "focus": "consonant cluster in 'thoughtful'",
         "text": "It's a thoughtful drama that makes you reflect on relationships long after the credits roll."
       },
       {
         "level": 3,
-        "focus": "âm /r/ và /l/ trong 'really' và 'lovely'",
+        "focus": "/r/ and /l/ in 'really' and 'lovely'",
         "text": "The soundtrack was really lovely, and the lead actor delivered a brilliant performance."
       }
+    ],
+    "starters": [
+      "What is the last movie or show you really enjoyed?",
+      "Do you prefer watching movies at the cinema or at home?",
+      "Who is your favorite actor, and why?",
+      "What kind of stories do you usually enjoy watching?"
     ]
   },
   {
@@ -691,44 +757,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /m/ trong 'music'",
+        "focus": "/m/ in 'music'",
         "text": "I listen to music every morning."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'lyrics'",
+        "focus": "/ɪ/ in 'lyrics'",
         "text": "I like songs with simple and honest lyrics."
       },
       {
         "level": 1,
-        "focus": "âm /ə/ trong 'concert'",
+        "focus": "schwa in 'concert'",
         "text": "I went to a concert last summer."
       },
       {
         "level": 2,
-        "focus": "nối âm 'listen to'",
+        "focus": "linking in 'listen to'",
         "text": "When I'm studying, I listen to instrumental music to stay focused."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ và /s/ trong 'thrill' và 'sill'",
+        "focus": "/θ/ vs /s/ in 'thrill' and 'sill'",
         "text": "The live performance gave me a real thrill, and the crowd sang along."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'playlist'",
+        "focus": "stress in 'playlist'",
         "text": "I made a playlist for my road trip, with a mix of old and new songs."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'rhythm'",
+        "focus": "consonant cluster in 'rhythm'",
         "text": "Her rhythm and melody are so powerful that they stay in your head for days."
       },
       {
         "level": 3,
-        "focus": "âm /v/ và /w/ trong 'vocal' và 'wonderful'",
+        "focus": "/v/ and /w/ in 'vocal' and 'wonderful'",
         "text": "Her vocal range is wonderful, and every note sounds effortless."
       }
+    ],
+    "starters": [
+      "What kind of music do you listen to when you study or relax?",
+      "Do you remember the first song you ever loved?",
+      "Have you ever been to a live concert?",
+      "Can you play any musical instrument?"
     ]
   },
   {
@@ -752,44 +824,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ɒ/ trong 'sport'",
+        "focus": "/ɒ/ in 'sport'",
         "text": "I play sports on weekends."
       },
       {
         "level": 1,
-        "focus": "âm /r/ trong 'run'",
+        "focus": "/r/ in 'run'",
         "text": "I run in the park three times a week."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'fit'",
+        "focus": "/ɪ/ in 'fit'",
         "text": "Exercise keeps me fit and gives me more energy."
       },
       {
         "level": 2,
-        "focus": "nối âm 'work out'",
+        "focus": "linking in 'work out'",
         "text": "I usually work out in the morning before I start my day."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'together'",
+        "focus": "/ð/ in 'together'",
         "text": "We play soccer together every Sunday, and it's always a lot of fun."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'competition'",
+        "focus": "stress in 'competition'",
         "text": "Did you watch the competition last night? The final match was intense."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'strength'",
+        "focus": "consonant cluster in 'strength'",
         "text": "Building strength and flexibility takes patience, but the results are worth the effort."
       },
       {
         "level": 3,
-        "focus": "âm /θ/ và /f/ trong 'three' và 'free'",
+        "focus": "/θ/ vs /f/ in 'three' and 'free'",
         "text": "I train three days a week and try to keep one day free for stretching and recovery."
       }
+    ],
+    "starters": [
+      "Do you play any sports, or do you exercise regularly?",
+      "Who is your favorite athlete or team?",
+      "What sport would you like to try if you had the chance?",
+      "Do you prefer watching sports or playing them?"
     ]
   },
   {
@@ -813,44 +891,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'phone'",
+        "focus": "/aɪ/ in 'phone'",
         "text": "I use my phone for almost everything."
       },
       {
         "level": 1,
-        "focus": "âm /æ/ trong 'app'",
+        "focus": "/æ/ in 'app'",
         "text": "This app helps me learn new words every day."
       },
       {
         "level": 1,
-        "focus": "âm /uː/ trong 'update'",
+        "focus": "/uː/ in 'update'",
         "text": "I need to update my software before I can open the file."
       },
       {
         "level": 2,
-        "focus": "nối âm 'turn on'",
+        "focus": "linking in 'turn on'",
         "text": "Please turn on the Wi-Fi so I can check my email."
       },
       {
         "level": 2,
-        "focus": "âm /p/ và /b/ trong 'privacy' và 'bite'",
+        "focus": "/p/ vs /b/ in 'privacy' and 'bite'",
         "text": "I'm careful about privacy, so I never share my password with anyone."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'internet'",
+        "focus": "stress in 'internet'",
         "text": "The internet connection is slow today, so I'll try again later."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'technology'",
+        "focus": "consonant cluster in 'technology'",
         "text": "Technology has changed the way we communicate, but it can also make us feel more isolated."
       },
       {
         "level": 3,
-        "focus": "âm /ɪ/ 'device' và 'digital'",
+        "focus": "/ɪ/ in 'device' and 'digital'",
         "text": "Digital devices have made learning easier, but I try to limit my screen time before bed."
       }
+    ],
+    "starters": [
+      "How has technology changed the way you live or work?",
+      "What app do you use the most every day?",
+      "Do you think we rely too much on our phones?",
+      "What new technology are you curious about?"
     ]
   },
   {
@@ -874,44 +958,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /w/ trong 'will'",
+        "focus": "/w/ in 'will'",
         "text": "I will study hard this year."
       },
       {
         "level": 1,
-        "focus": "âm /g/ trong 'goal'",
+        "focus": "/g/ in 'goal'",
         "text": "My goal is to speak English more confidently."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ 'plan'",
+        "focus": "/ɪ/ in 'plan'",
         "text": "I plan to travel abroad next summer."
       },
       {
         "level": 2,
-        "focus": "nối âm 'look forward to'",
+        "focus": "linking in 'look forward to'",
         "text": "I'm looking forward to starting a new job in another city."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ 'think'",
+        "focus": "/θ/ in 'think'",
         "text": "I think I'll have more opportunities if I improve my English."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'opportunity'",
+        "focus": "stress in 'opportunity'",
         "text": "I hope to take this opportunity to grow both personally and professionally."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'successful'",
+        "focus": "consonant cluster in 'successful'",
         "text": "In five years, I hope to be a successful manager who inspires my team."
       },
       {
         "level": 3,
-        "focus": "âm /ʒ/ 'pleasure'",
+        "focus": "/ʒ/ in 'pleasure'",
         "text": "It would be a pleasure to help others achieve their dreams while I pursue mine."
       }
+    ],
+    "starters": [
+      "Where do you see yourself in five years?",
+      "What goal are you working toward right now?",
+      "If you could live anywhere in the world, where would it be?",
+      "What is one skill you want to learn next year?"
     ]
   },
   {
@@ -935,44 +1025,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /h/ trong 'how'",
+        "focus": "/h/ in 'how'",
         "text": "How are you doing today?"
       },
       {
         "level": 1,
-        "focus": "âm /aʊ/ trong 'how' và 'now'",
+        "focus": "/aʊ/ in 'how' and 'now'",
         "text": "I'm doing well, thanks for asking."
       },
       {
         "level": 1,
-        "focus": "âm /w/ trong 'weekend'",
+        "focus": "/w/ in 'weekend'",
         "text": "What are your plans for the weekend?"
       },
       {
         "level": 2,
-        "focus": "nối âm 'catch up'",
+        "focus": "linking in 'catch up'",
         "text": "It's been ages! Let's catch up over coffee sometime."
       },
       {
         "level": 2,
-        "focus": "âm /ɔː/ trong 'forward'",
+        "focus": "/ɔː/ in 'forward'",
         "text": "Of course, I'd love to join you if I'm free that day."
       },
       {
         "level": 2,
-        "focus": "âm cuối /t/ trong 'thought'",
+        "focus": "final /t/ in 'thought'",
         "text": "I've been thinking about starting a new hobby, but I haven't decided yet."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'strengths'",
+        "focus": "consonant cluster in 'strengths'",
         "text": "Honestly, I'm glad the week is over, though I'm not sure how I'll rest properly."
       },
       {
         "level": 3,
-        "focus": "âm /ð/ và /θ/ trong 'other' và 'author'",
+        "focus": "/ð/ and /θ/ in 'other' and 'author'",
         "text": "Have you read anything good lately? My sister keeps recommending the same author to me."
       }
+    ],
+    "starters": [
+      "Hi there! How has your week been so far?",
+      "Did you do anything fun over the weekend?",
+      "How is the weather where you are today?",
+      "What have you been up to lately?"
     ]
   },
   {
@@ -996,44 +1092,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /f/ trong 'family'",
+        "focus": "/f/ in 'family'",
         "text": "I live with my family in a small house."
       },
       {
         "level": 1,
-        "focus": "âm /m/ trong 'mother'",
+        "focus": "/m/ in 'mother'",
         "text": "My mother is a kind and patient teacher."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'brother'",
+        "focus": "/ɪ/ in 'brother'",
         "text": "I have one older brother and two younger sisters."
       },
       {
         "level": 2,
-        "focus": "nối âm 'get along'",
+        "focus": "linking in 'get along'",
         "text": "My parents and I get along well, and we talk every week."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'father' và 'together'",
+        "focus": "/ð/ in 'father' and 'together'",
         "text": "On Sundays, my whole family gathers together for a big lunch."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'relatives'",
+        "focus": "stress in 'relatives'",
         "text": "Many of my relatives live in other cities, so we see each other during holidays."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'grandparents'",
+        "focus": "consonant cluster in 'grandparents'",
         "text": "My grandparents taught me the value of patience, and I still remember their stories."
       },
       {
         "level": 3,
-        "focus": "âm /θ/ trong 'nothing' và 'something'",
+        "focus": "/θ/ in 'nothing' and 'something'",
         "text": "Nothing makes me happier than hearing my family laugh together at the dinner table."
       }
+    ],
+    "starters": [
+      "Tell me about your family. Who do you live with?",
+      "Do you have any family traditions you enjoy?",
+      "Who in your family are you closest to, and why?",
+      "What do you usually do with your family on weekends?"
     ]
   },
   {
@@ -1057,44 +1159,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'it'",
+        "focus": "/ɪ/ in 'it'",
         "text": "It's sunny today, so I'm going to the park."
       },
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'rain'",
+        "focus": "/aɪ/ in 'rain'",
         "text": "It's raining, so I'll take an umbrella."
       },
       {
         "level": 1,
-        "focus": "âm /w/ trong 'windy'",
+        "focus": "/w/ in 'windy'",
         "text": "It's very windy outside, so please wear a warm jacket."
       },
       {
         "level": 2,
-        "focus": "nối âm 'turn cold'",
+        "focus": "linking in 'turn cold'",
         "text": "The weather is going to turn cold tonight, so bring a sweater."
       },
       {
         "level": 2,
-        "focus": "âm /ʌ/ trong 'humid'",
+        "focus": "/ʌ/ in 'humid'",
         "text": "The air is so humid in the afternoon that I can barely breathe."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'forecast'",
+        "focus": "stress in 'forecast'",
         "text": "According to the forecast, it will be cloudy with light showers this evening."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'thunderstorm'",
+        "focus": "consonant cluster in 'thunderstorm'",
         "text": "We had a thunderstorm last night, and the power went out for about an hour."
       },
       {
         "level": 3,
-        "focus": "âm /ɜː/ trong 'stormy' và 'early'",
+        "focus": "/ɜː/ in 'stormy' and 'early'",
         "text": "I prefer spring weather, but I'm getting used to the stormy summers here."
       }
+    ],
+    "starters": [
+      "What is the weather like where you live today?",
+      "What is your favorite season, and why?",
+      "Do you check the weather forecast every morning?",
+      "How does the weather affect your mood?"
     ]
   },
   {
@@ -1118,44 +1226,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /r/ trong 'recycle'",
+        "focus": "/r/ in 'recycle'",
         "text": "I recycle plastic bottles every week."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ 'energy'",
+        "focus": "/ɪ/ in 'energy'",
         "text": "I turn off the lights when I leave a room."
       },
       {
         "level": 1,
-        "focus": "âm /æ/ trong 'plastic'",
+        "focus": "/æ/ in 'plastic'",
         "text": "Plastic bags are bad for the environment."
       },
       {
         "level": 2,
-        "focus": "nối âm 'turn off'",
+        "focus": "linking in 'turn off'",
         "text": "Please turn off the air conditioner when you go out."
       },
       {
         "level": 2,
-        "focus": "âm /ɒ/ trong 'pollution'",
+        "focus": "/ɒ/ in 'pollution'",
         "text": "Air pollution has become a serious problem in many big cities."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'climate'",
+        "focus": "stress in 'climate'",
         "text": "Climate change affects everyone, so we all need to take responsibility."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'sustainable'",
+        "focus": "consonant cluster in 'sustainable'",
         "text": "Governments and businesses must invest in sustainable energy to reduce carbon emissions."
       },
       {
         "level": 3,
-        "focus": "âm /θ/ và /s/ trong 'thousands' và 'sustainable'",
+        "focus": "/θ/ and /s/ in 'thousands' and 'sustainable'",
         "text": "Thousands of people joined the campaign to protect the forest and its wildlife."
       }
+    ],
+    "starters": [
+      "What can people do to protect the environment in daily life?",
+      "Have you noticed any changes in your city's air quality?",
+      "Do you try to recycle or reduce waste at home?",
+      "What is one habit you would like to change to help the planet?"
     ]
   },
   {
@@ -1179,44 +1293,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ʊ/ trong 'good'",
+        "focus": "/ʊ/ in 'good'",
         "text": "Tết is the most important holiday in Vietnam."
       },
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'lucky'",
+        "focus": "/aɪ/ in 'lucky'",
         "text": "Children receive lucky money during Tết."
       },
       {
         "level": 1,
-        "focus": "âm /l/ trong 'family'",
+        "focus": "/l/ in 'family'",
         "text": "Every year, my family cooks banh chung together."
       },
       {
         "level": 2,
-        "focus": "nối âm 'family reunion'",
+        "focus": "linking in 'family reunion'",
         "text": "We have a big family reunion, and everyone travels back home for Tết."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'they' và 'their'",
+        "focus": "/ð/ in 'they' and 'their'",
         "text": "They clean the house before the New Year because they want a fresh start."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'tradition'",
+        "focus": "stress in 'tradition'",
         "text": "It's a tradition to visit relatives and wish them good health."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'celebrate'",
+        "focus": "consonant cluster in 'celebrate'",
         "text": "We celebrate by sharing food, playing games, and telling stories about our ancestors."
       },
       {
         "level": 3,
-        "focus": "âm /ʃ/ và /tʃ/ trong 'fresh' và 'church'",
+        "focus": "/ʃ/ and /tʃ/ in 'fresh' and 'church'",
         "text": "The streets are quiet, but the fresh flowers and decorations make the whole city feel alive."
       }
+    ],
+    "starters": [
+      "How do people celebrate Tết in your family?",
+      "What is your favorite food to eat during Tết?",
+      "What tradition would foreigners find most interesting?",
+      "How has the way people celebrate Tết changed over the years?"
     ]
   },
   {
@@ -1240,44 +1360,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ʊ/ trong 'book'",
+        "focus": "/ʊ/ in 'book'",
         "text": "I read a book every week."
       },
       {
         "level": 1,
-        "focus": "âm /ɔː/ trong 'short'",
+        "focus": "/ɔː/ in 'short'",
         "text": "I like short stories because they're easy to finish."
       },
       {
         "level": 1,
-        "focus": "âm /iː/ trong 'reading'",
+        "focus": "/iː/ in 'reading'",
         "text": "Reading helps me relax before I go to sleep."
       },
       {
         "level": 2,
-        "focus": "nối âm 'picked up'",
+        "focus": "linking in 'picked up'",
         "text": "I picked up this novel at the library, and I couldn't put it down."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ trong 'author'",
+        "focus": "/θ/ in 'author'",
         "text": "The author writes about history in a way that makes it feel alive."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'recommend'",
+        "focus": "stress in 'recommend'",
         "text": "Could you recommend a good book about personal growth?"
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'biography'",
+        "focus": "consonant cluster in 'biography'",
         "text": "I'm reading a biography of an inventor, and it's fascinating how much perseverance she had."
       },
       {
         "level": 3,
-        "focus": "âm /r/ và /l/ 'literature'",
+        "focus": "/r/ and /l/ in 'literature'",
         "text": "Modern literature often explores how people struggle to understand their own identity."
       }
+    ],
+    "starters": [
+      "Do you enjoy reading? What have you read recently?",
+      "Do you prefer paper books or e-books? Why?",
+      "Is there a book that changed the way you think?",
+      "Would you ever like to write a book?"
     ]
   },
   {
@@ -1301,44 +1427,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ɜː/ trong 'learn'",
+        "focus": "/ɜː/ in 'learn'",
         "text": "I learn new things every day."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'study'",
+        "focus": "/ɪ/ in 'study'",
         "text": "I study English for thirty minutes each morning."
       },
       {
         "level": 1,
-        "focus": "âm /tʃ/ trong 'teacher'",
+        "focus": "/tʃ/ in 'teacher'",
         "text": "My teacher is very patient and encouraging."
       },
       {
         "level": 2,
-        "focus": "nối âm 'graduated from'",
+        "focus": "linking in 'graduated from'",
         "text": "I graduated from university in 2020 with a degree in engineering."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'they' và 'that'",
+        "focus": "/ð/ in 'they' and 'that'",
         "text": "The exams were difficult, but they taught me how to manage my time."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'scholarship'",
+        "focus": "stress in 'scholarship'",
         "text": "I received a scholarship that helped me pay for my first year."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'knowledge'",
+        "focus": "consonant cluster in 'knowledge'",
         "text": "Good education gives people the knowledge and confidence to make their own decisions."
       },
       {
         "level": 3,
-        "focus": "âm /ʃ/ và /ʒ/ trong 'education' và 'confusion'",
+        "focus": "/ʃ/ and /ʒ/ in 'education' and 'confusion'",
         "text": "Sometimes the explanations are confusing, but a good lecture can change how you think."
       }
+    ],
+    "starters": [
+      "What did you study at school or university, and why did you choose it?",
+      "What is the best way for you to learn something new?",
+      "Would you like to study abroad? Why or why not?",
+      "What advice would you give to a student today?"
     ]
   },
   {
@@ -1362,44 +1494,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /tʃ/ trong 'childhood'",
+        "focus": "/tʃ/ in 'childhood'",
         "text": "I spent my childhood in a small village."
       },
       {
         "level": 1,
-        "focus": "âm /æ/ trong 'happy'",
+        "focus": "/æ/ in 'happy'",
         "text": "I was a happy child, and I loved playing outside."
       },
       {
         "level": 1,
-        "focus": "âm /uː/ trong 'food'",
+        "focus": "/uː/ in 'food'",
         "text": "My grandmother cooked delicious food every Sunday."
       },
       {
         "level": 2,
-        "focus": "nối âm 'grew up'",
+        "focus": "linking in 'grew up'",
         "text": "I grew up near a river, and we often swam there in the summer."
       },
       {
         "level": 2,
-        "focus": "âm /ɪ/ trong 'remember'",
+        "focus": "/ɪ/ in 'remember'",
         "text": "I still remember the smell of the rice fields after the rain."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'neighborhood'",
+        "focus": "stress in 'neighborhood'",
         "text": "Everyone in our neighborhood knew each other, and we looked out for one another."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'nostalgic'",
+        "focus": "consonant cluster in 'nostalgic'",
         "text": "Thinking about those summers always makes me feel nostalgic and a little sentimental."
       },
       {
         "level": 3,
-        "focus": "âm /θ/ và /ð/ 'thoughtful' và 'together'",
+        "focus": "/θ/ and /ð/ in 'thoughtful' and 'together'",
         "text": "My parents were thoughtful and kind, and they always made time for us together."
       }
+    ],
+    "starters": [
+      "What is one of your favorite memories from when you were a child?",
+      "What games did you play as a kid?",
+      "How has your hometown changed since you were young?",
+      "What did you want to be when you grew up?"
     ]
   },
   {
@@ -1423,44 +1561,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /s/ trong 'social'",
+        "focus": "/s/ in 'social'",
         "text": "I use social media to keep in touch with friends."
       },
       {
         "level": 1,
-        "focus": "âm /æ/ trong 'app'",
+        "focus": "/æ/ in 'app'",
         "text": "I post photos of my trips on this app."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'phone'",
+        "focus": "/ɪ/ in 'phone'",
         "text": "I spend too much time on my phone."
       },
       {
         "level": 2,
-        "focus": "nối âm 'scroll through'",
+        "focus": "linking in 'scroll through'",
         "text": "I sometimes scroll through my feed for hours without noticing."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'them' và 'they'",
+        "focus": "/ð/ in 'them' and 'they'",
         "text": "Some people feel pressure to share everything, but I think they should relax."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'addictive'",
+        "focus": "stress in 'addictive'",
         "text": "Social media can be addictive, so I set a limit each day."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'influence'",
+        "focus": "consonant cluster in 'influence'",
         "text": "Online influencers can shape what people buy, what they wear, and even how they think."
       },
       {
         "level": 3,
-        "focus": "âm /θ/ và /f/ trong 'truth' và 'fact'",
+        "focus": "/θ/ and /f/ in 'truth' and 'fact'",
         "text": "It's important to check the truth before you share a post, because misinformation spreads quickly."
       }
+    ],
+    "starters": [
+      "How much time do you spend on social media, and how does it make you feel?",
+      "Do you think social media is more helpful or harmful?",
+      "Have you ever taken a break from social media?",
+      "What kind of content do you enjoy watching online?"
     ]
   },
   {
@@ -1484,44 +1628,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /s/ trong 'city'",
+        "focus": "/s/ in 'city'",
         "text": "I live in a big city."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'busy'",
+        "focus": "/ɪ/ in 'busy'",
         "text": "The streets are busy, but I like the energy."
       },
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'quiet'",
+        "focus": "/aɪ/ in 'quiet'",
         "text": "I prefer a quiet place to live."
       },
       {
         "level": 2,
-        "focus": "nối âm 'in the countryside'",
+        "focus": "linking in 'in the countryside'",
         "text": "I'd rather live in the countryside, where the air is fresh and the people are friendly."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'there' và 'their'",
+        "focus": "/ð/ in 'there' and 'their'",
         "text": "There are more jobs in the city, but the rent there is very high."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'convenient'",
+        "focus": "stress in 'convenient'",
         "text": "Public transport is convenient, so I don't need a car."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'traffic'",
+        "focus": "consonant cluster in 'traffic'",
         "text": "The traffic jams are frustrating, but the variety of food and culture makes up for it."
       },
       {
         "level": 3,
-        "focus": "âm /ʃ/ và /ʒ/ 'pleasure' và 'measure'",
+        "focus": "/ʃ/ and /ʒ/ in 'pleasure' and 'measure'",
         "text": "Living close to parks gives me a sense of peace that I really value."
       }
+    ],
+    "starters": [
+      "Would you rather live in a busy city or in the countryside? Why?",
+      "What do you like most about where you live?",
+      "What would make your city a better place to live?",
+      "What do you miss most about your hometown?"
     ]
   },
   {
@@ -1545,44 +1695,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /s/ trong 'stress'",
+        "focus": "/s/ in 'stress'",
         "text": "I feel stressed when I have too many tasks."
       },
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'relax'",
+        "focus": "/aɪ/ in 'relax'",
         "text": "I relax by listening to music."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'sleep'",
+        "focus": "/ɪ/ in 'sleep'",
         "text": "I try to get enough sleep every night."
       },
       {
         "level": 2,
-        "focus": "nối âm 'take a break'",
+        "focus": "linking in 'take a break'",
         "text": "When I feel overwhelmed, I take a short break and go for a walk."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ trong 'breath'",
+        "focus": "/θ/ in 'breath'",
         "text": "Deep breathing helps me calm down when I'm nervous."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'balance'",
+        "focus": "stress in 'balance'",
         "text": "Finding a good balance between work and rest is harder than it sounds."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'burnout'",
+        "focus": "consonant cluster in 'burnout'",
         "text": "If you ignore the warning signs, you might end up with complete burnout."
       },
       {
         "level": 3,
-        "focus": "âm /ɒ/ và /ɔː/ trong 'worry' và 'more'",
+        "focus": "/ɒ/ and /ɔː/ in 'worry' and 'more'",
         "text": "Worrying about the future rarely solves problems, so I focus on what I can control."
       }
+    ],
+    "starters": [
+      "How do you usually deal with stress?",
+      "What helps you relax after a long day?",
+      "Do you think people talk about stress enough today?",
+      "How do you keep a healthy balance between work and rest?"
     ]
   },
   {
@@ -1606,44 +1762,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /m/ trong 'money'",
+        "focus": "/m/ in 'money'",
         "text": "I try to save money every month."
       },
       {
         "level": 1,
-        "focus": "âm /aɪ/ trong 'buy'",
+        "focus": "/aɪ/ in 'buy'",
         "text": "I only buy things that I really need."
       },
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'budget'",
+        "focus": "/ɪ/ in 'budget'",
         "text": "I have a budget for food and transportation."
       },
       {
         "level": 2,
-        "focus": "nối âm 'set aside'",
+        "focus": "linking in 'set aside'",
         "text": "I set aside part of my salary for emergencies and future plans."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ trong 'thousand'",
+        "focus": "/θ/ in 'thousand'",
         "text": "A thousand dollars would help me pay for the trip I've been planning."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'expensive'",
+        "focus": "stress in 'expensive'",
         "text": "Housing is expensive in this city, so I'm looking for a cheaper apartment."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'investment'",
+        "focus": "consonant cluster in 'investment'",
         "text": "I'm learning about investment, but I want to understand the risks before I put any money in."
       },
       {
         "level": 3,
-        "focus": "âm /ʃ/ và /tʃ/ 'financial' và 'choice'",
+        "focus": "/ʃ/ and /tʃ/ in 'financial' and 'choice'",
         "text": "Making financial choices early can make a big difference in the long run."
       }
+    ],
+    "starters": [
+      "Are you good at saving money? How do you manage your budget?",
+      "What is the most expensive thing you have bought recently?",
+      "Do you think it is important to learn about investing?",
+      "Would you rather have a high salary or more free time?"
     ]
   },
   {
@@ -1667,44 +1829,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'live'",
+        "focus": "/ɪ/ in 'live'",
         "text": "I lived in Australia for six months."
       },
       {
         "level": 1,
-        "focus": "âm /ɔː/ trong 'abroad'",
+        "focus": "/ɔː/ in 'abroad'",
         "text": "Living abroad taught me a lot."
       },
       {
         "level": 1,
-        "focus": "âm /f/ trong 'food'",
+        "focus": "/f/ in 'food'",
         "text": "The food was different, but I liked it."
       },
       {
         "level": 2,
-        "focus": "nối âm 'get used to'",
+        "focus": "linking in 'get used to'",
         "text": "At first it was hard, but I got used to the new routine after a few weeks."
       },
       {
         "level": 2,
-        "focus": "âm /θ/ trong 'theme' và 'thought'",
+        "focus": "/θ/ in 'theme' and 'thought'",
         "text": "I thought the culture would be similar to mine, but I was wrong."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'independent'",
+        "focus": "stress in 'independent'",
         "text": "Living on my own made me more independent and confident."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'adjustment'",
+        "focus": "consonant cluster in 'adjustment'",
         "text": "The adjustment period was challenging, but it helped me understand different perspectives."
       },
       {
         "level": 3,
-        "focus": "âm /ɜː/ và /ər/ trong 'journey' và 'learner'",
+        "focus": "/ɜː/ and /ər/ in 'journey' and 'learner'",
         "text": "The whole journey taught me that every learner has a unique path to fluency."
       }
+    ],
+    "starters": [
+      "Have you ever lived or worked in another country? What was it like?",
+      "What is the hardest part about living in a foreign country?",
+      "What would you miss most about home?",
+      "Would you like to live abroad in the future?"
     ]
   },
   {
@@ -1728,44 +1896,50 @@
     "samples": [
       {
         "level": 1,
-        "focus": "âm /ɪ/ trong 'dinner'",
+        "focus": "/ɪ/ in 'dinner'",
         "text": "Last night we had a delicious dinner."
       },
       {
         "level": 1,
-        "focus": "âm /tʃ/ trong 'lunch'",
+        "focus": "/tʃ/ in 'lunch'",
         "text": "We had lunch by the beach."
       },
       {
         "level": 1,
-        "focus": "âm /ɔː/ trong 'sure'",
+        "focus": "/ɔː/ in 'sure'",
         "text": "I'm sure it was the best meal of the year."
       },
       {
         "level": 2,
-        "focus": "nối âm 'by the sea'",
+        "focus": "linking in 'by the sea'",
         "text": "We ate fresh seafood by the sea, and the sunset made the evening perfect."
       },
       {
         "level": 2,
-        "focus": "âm /ð/ trong 'the' và 'that'",
+        "focus": "/ð/ in 'the' and 'that'",
         "text": "The atmosphere was warm, and that made the whole experience special."
       },
       {
         "level": 2,
-        "focus": "trọng âm 'memorable'",
+        "focus": "stress in 'memorable'",
         "text": "It was a memorable celebration, and everyone shared their favorite stories."
       },
       {
         "level": 3,
-        "focus": "chuỗi phụ âm 'homemade'",
+        "focus": "consonant cluster in 'homemade'",
         "text": "The homemade soup was simple, but the flavors were so rich that I asked for a second bowl."
       },
       {
         "level": 3,
-        "focus": "âm /θ/ và /s/ trong 'thoughtful' và 'special'",
+        "focus": "/θ/ and /s/ in 'thoughtful' and 'special'",
         "text": "Thoughtful friends and a special dish always make an ordinary evening feel unforgettable."
       }
+    ],
+    "starters": [
+      "Describe a memorable meal you had. Where were you, and who were you with?",
+      "What is the best meal you have ever cooked for someone?",
+      "Do you prefer eating out or at home? Why?",
+      "What dish would you love to try in another country?"
     ]
   }
 ]

@@ -2,18 +2,18 @@
 // optionally with a minimal-pair partner that is easy to confuse with it.
 
 export const SOUND_PAIRS = [
-  { word: 'think', pair: 'sink', tip: 'Đặt đầu lưỡi giữa hai hàm răng rồi thổi nhẹ (âm /θ/). Không đọc thành "s".' },
-  { word: 'three', pair: 'tree', tip: 'Giống "think": lưỡi giữa răng, không đọc thành "tree" (lưỡi chạm lợi).' },
-  { word: 'very', pair: 'berry', tip: 'Răng trên chạm môi dưới để đọc /v/. Đừng mím hai môi như /b/.' },
-  { word: 'light', pair: 'right', tip: 'Âm "l": đầu lưỡi chạm lợi trên. Âm "r": lưỡi không chạm gì, môi hơi tròn.' },
-  { word: 'ship', pair: 'sheep', tip: '/ɪ/ ngắn và thả lỏng ở "ship". /iː/ kéo dài, môi căng ở "sheep".' },
-  { word: 'chicken', tip: '"ch" bật hơi nhẹ như "ch" tiếng Việt. Không đọc thành "sh".' },
-  { word: 'bowl', tip: 'Môi tròn khi đọc "ow". Âm /l/ cuối: đầu lưỡi chạm lợi rõ, không đọc thành "bao".' },
-  { word: 'spring', tip: 'Đọc liền cụm "spr" thành một âm, không tách thành "sờ-pờ-ring".' },
-  { word: 'vegetable', tip: '3 âm tiết: VEJ-tuh-bul. Âm cuối nhẹ, không đọc đủ "ta-bồ".' },
-  { word: 'comfortable', tip: 'Thường rút gọn còn 3 âm tiết: KUMF-tuh-bul.' },
-  { word: 'thought', pair: 'taught', tip: '"th" đặt lưỡi giữa răng. "au" tròn môi hơn, kéo dài.' },
-  { word: 'work', pair: 'walk', tip: '/ɜːr/ lưỡi cuộn nhẹ, môi không tròn. /ɔːk/ môi tròn, không cuộn lưỡi.' },
+  { word: 'think', pair: 'sink', tip: 'Place the tip of your tongue between your teeth and blow gently (/θ/). Don\'t say it like "s".' },
+  { word: 'three', pair: 'tree', tip: 'Like "think": tongue between the teeth. Don\'t say "tree" (tongue touching the ridge behind the teeth).' },
+  { word: 'very', pair: 'berry', tip: 'Upper teeth touch the lower lip for /v/. Don\'t press both lips together like /b/.' },
+  { word: 'light', pair: 'right', tip: '"l": the tip of your tongue touches the ridge behind your upper teeth. "r": the tongue touches nothing and the lips are slightly rounded.' },
+  { word: 'ship', pair: 'sheep', tip: 'Short, relaxed /ɪ/ in "ship". Long /iː/ with lips spread in "sheep".' },
+  { word: 'chicken', tip: 'A light "ch" with a puff of air. Don\'t say it like "sh".' },
+  { word: 'bowl', tip: 'Round your lips for "ow". For the final /l/, clearly touch the ridge behind your teeth. Don\'t say "bao".' },
+  { word: 'spring', tip: 'Say "spr" as one smooth sound, not "suh-puh-ring".' },
+  { word: 'vegetable', tip: 'Three syllables: VEJ-tuh-bul. The last syllable is light, not a full "tuh-boh".' },
+  { word: 'comfortable', tip: 'Often shortened to three syllables: KUMF-tuh-bul.' },
+  { word: 'thought', pair: 'taught', tip: '"th": tongue between the teeth. "au": round the lips more and hold the vowel longer.' },
+  { word: 'work', pair: 'walk', tip: '/ɜːr/: curl the tongue slightly, lips not rounded. /ɔːk/: round the lips, no tongue curl.' },
 ];
 
 export function normalize(text) {

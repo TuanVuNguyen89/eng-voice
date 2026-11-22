@@ -48,7 +48,7 @@ const DANGLING = /\b(and|but|or|so|because|to|the|a|an|of|with|for|that|if|when|
  */
 export function createTurnListener({ silenceMs = 2000, pauseMs = 4000, onPartial, onFinal, onError }) {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SR) throw new Error('Trình duyệt không hỗ trợ nhận giọng nói. Hãy dùng Chrome hoặc Edge.');
+  if (!SR) throw new Error('This browser does not support voice input. Use Chrome or Edge.');
 
   let rec = null;
   let running = false;
@@ -131,15 +131,15 @@ export function createTurnListener({ silenceMs = 2000, pauseMs = 4000, onPartial
 export function listenOnce() {
   return new Promise((resolve, reject) => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) return reject(new Error('Trình duyệt không hỗ trợ nhận giọng nói. Hãy dùng Chrome hoặc Edge.'));
+    if (!SR) return reject(new Error('This browser does not support voice input. Use Chrome or Edge.'));
     const r = new SR();
     r.lang = 'en-US';
     r.interimResults = false;
     r.maxAlternatives = 1;
     let got = false;
     r.onresult = (e) => { got = true; resolve(e.results[0][0].transcript); };
-    r.onerror = (e) => reject(new Error(`Lỗi micro: ${e.error}`));
-    r.onend = () => { if (!got) reject(new Error('Không nghe thấy gì, thử lại nhé.')); };
+    r.onerror = (e) => reject(new Error(`Microphone error: ${e.error}`));
+    r.onend = () => { if (!got) reject(new Error('Didn\'t catch anything. Try again.')); };
     try { r.start(); } catch (e) { reject(e); }
   });
 }

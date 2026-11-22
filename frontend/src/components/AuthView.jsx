@@ -12,8 +12,8 @@ export default function AuthView({ onAuthed }) {
   async function submit(e) {
     e.preventDefault();
     const name = username.trim();
-    if (!name || !password) return setError('Nhập đầy đủ tên đăng nhập và mật khẩu');
-    if (mode === 'register' && password.length < 6) return setError('Mật khẩu cần ít nhất 6 ký tự');
+    if (!name || !password) return setError('Enter both username and password');
+    if (mode === 'register' && password.length < 6) return setError('Password must be at least 6 characters');
 
     setError('');
     setBusy(true);
@@ -36,30 +36,30 @@ export default function AuthView({ onAuthed }) {
   return (
     <div className="auth">
       <form className="auth-card" onSubmit={submit}>
-        <h2>{mode === 'login' ? 'Đăng nhập' : 'Tạo tài khoản'}</h2>
+        <h2>{mode === 'login' ? 'Log in' : 'Create account'}</h2>
         <label className="field">
-          Tên đăng nhập
+          Username
           <input value={username} onChange={(e) => setUsername(e.target.value)} autoComplete="username" />
         </label>
         <label className="field">
-          Mật khẩu
+          Password
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
             autoComplete={mode === 'login' ? 'current-password' : 'new-password'} />
         </label>
         <label className="check">
           <input type="checkbox" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
-          Ghi nhớ đăng nhập trên máy này
+          Remember me on this device
         </label>
         {error && <div className="status err">{error}</div>}
         <button type="submit" className="primary wide" disabled={busy}>
-          {busy ? 'Đang xử lý...' : mode === 'login' ? 'Đăng nhập' : 'Đăng ký và vào học'}
+          {busy ? 'Working...' : mode === 'login' ? 'Log in' : 'Sign up and start'}
         </button>
         <button
           type="button"
           className="ghost wide"
           onClick={() => { setMode(mode === 'login' ? 'register' : 'login'); setError(''); }}
         >
-          {mode === 'login' ? 'Chưa có tài khoản? Đăng ký' : 'Đã có tài khoản? Đăng nhập'}
+          {mode === 'login' ? 'No account yet? Sign up' : 'Already have an account? Log in'}
         </button>
       </form>
     </div>

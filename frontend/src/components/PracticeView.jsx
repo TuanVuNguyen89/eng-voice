@@ -3,10 +3,10 @@ import { listenOnce, speak } from '../speech';
 import { compareWords } from '../words';
 
 const LEVELS = [
-  { value: 0, label: 'Tất cả' },
-  { value: 1, label: 'Dễ' },
-  { value: 2, label: 'Trung bình' },
-  { value: 3, label: 'Khó' },
+  { value: 0, label: 'All' },
+  { value: 1, label: 'Easy' },
+  { value: 2, label: 'Medium' },
+  { value: 3, label: 'Hard' },
 ];
 
 export default function PracticeView({ topic, voiceName, rate }) {
@@ -56,7 +56,7 @@ export default function PracticeView({ topic, voiceName, rate }) {
         </div>
       </div>
 
-      {!current && <p className="muted">Chưa có câu nào ở mức này.</p>}
+      {!current && <p className="muted">No sentences at this level.</p>}
 
       {current && (
         <SentenceMode
@@ -104,19 +104,19 @@ function SentenceMode({
   return (
     <>
       <p className="muted">
-        Câu {(index % pool.length) + 1}/{pool.length}
-        {current.focus && <> · Chú ý: {current.focus}</>}
+        Sentence {(index % pool.length) + 1}/{pool.length}
+        {current.focus && <> · Focus: {current.focus}</>}
       </p>
       <label className="field">
-        Câu mẫu (có thể sửa)
+        Model sentence (you can edit it)
         <textarea rows={3} value={target} onChange={(e) => { setTarget(e.target.value); setResult(null); }} />
       </label>
       <div className="row">
-        <button type="button" className="ghost" onClick={() => speak(target, { voiceName, rate })}>🔊 Nghe mẫu</button>
+        <button type="button" className="ghost" onClick={() => speak(target, { voiceName, rate })}>🔊 Listen</button>
         <button type="button" className="primary" onClick={handleSay} disabled={listening || !target.trim()}>
-          {listening ? '🎙️ Đang nghe...' : '🎤 Đọc cả câu'}
+          {listening ? '🎙️ Listening...' : '🎤 Read the sentence'}
         </button>
-        <button type="button" className="ghost" onClick={nextSentence} disabled={pool.length < 2}>🔀 Câu khác</button>
+        <button type="button" className="ghost" onClick={nextSentence} disabled={pool.length < 2}>🔀 Another</button>
       </div>
       {error && <div className="status err">{error}</div>}
 
@@ -124,23 +124,23 @@ function SentenceMode({
         <div className="result">
           <div className="row">
             <span className="big-score">{result.score}%</span>
-            <span className="muted">Đúng {result.words.filter((x) => x.ok).length}/{result.words.length} từ</span>
+            <span className="muted">Correct: {result.words.filter((x) => x.ok).length}/{result.words.length} words</span>
           </div>
-          <div className="muted">Máy nghe được: "{result.said}"</div>
+          <div className="muted">Heard: "{result.said}"</div>
           <div className="words">
             {result.words.map((x, i) => (
               <span key={i}>
                 <span className={`w ${x.ok ? 'ok' : 'bad'}`}>{x.w}</span>
                 {!x.ok && (
-                  <button type="button" className="say" title="Nghe từ này" onClick={() => speak(x.w, { voiceName, rate })}>🔊</button>
+                  <button type="button" className="say" title="Listen to this word" onClick={() => speak(x.w, { voiceName, rate })}>🔊</button>
                 )}{' '}
               </span>
             ))}
           </div>
           <p className="muted">
             {bad.length
-              ? `Cần luyện: ${bad.join(', ')}. Chuyển sang chế độ "Từng từ" để luyện riêng.`
-              : 'Tuyệt vời! Bạn đọc đúng toàn bộ câu.'}
+              ? `Practice these: ${bad.join(', ')}.`
+              : 'Excellent! You read the whole sentence correctly.'}
           </p>
         </div>
       )}

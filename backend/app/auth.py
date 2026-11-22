@@ -27,9 +27,9 @@ _VERIFIED_MAX = 1000
 
 def validate_new_account(username: str, password: str) -> None:
     if not USERNAME_RE.match(username):
-        raise HTTPException(400, "Tên đăng nhập 3-32 ký tự: chữ, số, _ . -")
+        raise HTTPException(400, "Username must be 3-32 characters: letters, digits, _ . -")
     if len(password) < MIN_PASSWORD_LEN:
-        raise HTTPException(400, f"Mật khẩu cần ít nhất {MIN_PASSWORD_LEN} ký tự")
+        raise HTTPException(400, f"Password must be at least {MIN_PASSWORD_LEN} characters")
 
 
 def hash_password(password: str) -> str:
@@ -78,11 +78,11 @@ def current_user(
 
     creds = parse_basic(authorization)
     if not creds:
-        raise HTTPException(401, "Cần đăng nhập")
+        raise HTTPException(401, "Please log in")
     username, password = creds
     user = db.scalar(select(User).where(User.username == username))
     if user is None or not verify_password(password, user.password_hash):
-        raise HTTPException(401, "Sai tên đăng nhập hoặc mật khẩu")
+        raise HTTPException(401, "Wrong username or password")
 
     if len(_verified) >= _VERIFIED_MAX:
         _verified.clear()

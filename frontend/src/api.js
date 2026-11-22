@@ -29,7 +29,7 @@ async function request(path, options = {}) {
   if (!res.ok) {
     // A protected call failing with 401 means the saved login is no longer valid.
     if (res.status === 401 && token && !path.startsWith('/auth/') && onAuthLost) onAuthLost();
-    let message = `Lỗi ${res.status}`;
+    let message = `Error ${res.status}`;
     try {
       const data = await res.json();
       if (typeof data.detail === 'string') message = data.detail;
@@ -63,6 +63,6 @@ export function postTurn(sessionId, text, audioBlob) {
 // <audio src> cannot send headers, so audio is fetched with auth and played from a blob URL.
 export async function fetchAudioUrl(url) {
   const res = await fetch(url, { headers: authHeaders() });
-  if (!res.ok) throw new Error(`Không tải được ghi âm (${res.status})`);
+  if (!res.ok) throw new Error(`Could not load the recording (${res.status})`);
   return URL.createObjectURL(await res.blob());
 }
