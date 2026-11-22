@@ -1,4 +1,4 @@
-/* Luyện nói với Bo: a comic-book stage. Ink outlines, hard shadows, sunshine accents. */
+/* Luyện nói với Sao: a comic-book stage. Ink outlines, hard shadows, sunshine accents. */
 
 :root {
   --ink: #1f2140;
@@ -428,20 +428,22 @@ button.danger { color: var(--bad); }
 }
 .auth-card h2 { font-family: var(--display); font-size: 24px; color: var(--ink); margin: 0 0 6px; text-align: center; }
 
-/* ----- Genie the mascot ----- */
+/* ----- Sao the mascot ----- */
 .mascot { overflow: visible; animation: bob 3.2s ease-in-out infinite; flex: none; }
-.mascot .gem { transform-origin: 60px 28px; }
-.mascot .mouth { transform-origin: 60px 80px; transition: all 0.2s ease; }
+.mascot .star { transform-origin: 60px 95px; }
+.mascot .mouth { transform-origin: 60px 84px; transition: all 0.2s ease; }
 .mascot .eye { transform-origin: center; transform-box: fill-box; }
-.mascot .wisp { transform-origin: 60px 84px; }
+.mascot .arm { transform-origin: 60px 60px; transform-box: view-box; }
+.mascot .arm-l { transform-origin: 30px 70px; }
+.mascot .arm-r { transform-origin: 90px 70px; }
 
-.mood-listening .gem { animation: blink 0.9s steps(2, start) infinite; }
-.mood-listening .mouth { d: path("M53 79 Q60 77 67 79"); }
+.mood-listening .star { animation: twinkle 0.9s ease-in-out infinite; }
+.mood-listening .mouth { d: path("M54 83 Q60 81 66 83"); }
 .mood-thinking .eye { animation: look 1.6s ease-in-out infinite; }
 .mood-speaking .mouth { animation: talk 0.28s ease-in-out infinite alternate; }
-.mood-speaking .wisp { animation: sway 1.4s ease-in-out infinite; }
+.mood-speaking .arm-r { animation: wave 1s ease-in-out infinite; }
 .mood-happy { animation: hop 0.9s cubic-bezier(0.3, 1.6, 0.5, 1) 1; }
-.mood-happy .mouth { d: path("M46 76 Q60 94 74 76"); }
+.mood-happy .mouth { d: path("M48 82 Q60 94 72 82"); }
 
 /* ----- one orchestrated moment + ripple on action ----- */
 @keyframes pop-in {
@@ -454,6 +456,8 @@ button.danger { color: var(--bad); }
 @keyframes look { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(3px); } }
 @keyframes hop { 0% { transform: translateY(0); } 40% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
 @keyframes sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+@keyframes twinkle { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12) rotate(8deg); } }
+@keyframes wave { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-22deg); } }
 @keyframes ripple { 0% { transform: scale(0.9); opacity: 0.9; } 100% { transform: scale(1.5); opacity: 0; } }
 
 @media (prefers-reduced-motion: reduce) {

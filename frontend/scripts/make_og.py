@@ -1,6 +1,6 @@
 """Render public/og-image.png (1200x630) for link previews.
 
-Draws the same Genie shapes as src/components/Mascot.jsx, at 2x and then downsampled.
+Draws the same Sao shapes as src/components/Mascot.jsx, at 2x and then downsampled.
 Run: python frontend/scripts/make_og.py
 """
 from pathlib import Path
@@ -33,44 +33,61 @@ def quad(p0, p1, p2, steps=40):
     return pts
 
 
-def genie(draw, ox, oy, k):
-    """Draw the Genie with its 120x120 SVG origin at (ox, oy), scale k (px per SVG unit)."""
+def sao(draw, ox, oy, k):
+    """Draw Sao (same geometry as src/components/Mascot.jsx, 120x120 SVG units) at (ox, oy), scale k."""
+    RED = (229, 57, 53)
+    STRAW = (242, 210, 122)
+    RIB = (184, 134, 43)
+    PINK_CHEEK = (255, 154, 168)
+
     def P(x, y):
         return (S(ox + x * k), S(oy + y * k))
 
     def sw(w):
         return max(1, S(w * k))
 
-    # wisp tail: M38 84 Q60 126 82 84 Q76 112 60 116 Q44 112 38 84 Z
-    wisp = quad((40, 84), (60, 112), (80, 84)) + quad((80, 84), (72, 104), (60, 108)) + quad((60, 108), (48, 104), (40, 84))
-    draw.polygon([P(*p) for p in wisp], fill=BLUE, outline=INK, width=sw(4))
+    def circle(cx, cy, r, fill, outline=None, width=0):
+        x0, y0 = P(cx - r, cy - r)
+        x1, y1 = P(cx + r, cy + r)
+        draw.ellipse([x0, y0, x1, y1], fill=fill, outline=outline, width=width)
 
-    # body ellipse centre (60,64) rx30 ry32
-    draw.ellipse([P(30, 32), P(90, 96)], fill=BLUE, outline=INK, width=sw(4))
+    # feet and arms (behind the body)
+    for fx in (46, 74):
+        x0, y0 = P(fx - 8, 99)
+        x1, y1 = P(fx + 8, 109)
+        draw.ellipse([x0, y0, x1, y1], fill=INK)
+    for ax in (22, 98):
+        circle(ax, 76, 8, RED, INK, sw(3.5))
 
-    # turban: M31 38 Q60 2 89 38 Q60 46 31 38 Z
-    turban = quad((31, 38), (60, 2), (89, 38)) + quad((89, 38), (60, 46), (31, 38))
-    draw.polygon([P(*p) for p in turban], fill=SUN, outline=INK, width=sw(4))
-
-    # gem
-    draw.ellipse([P(55, 23), P(65, 33)], fill=PINK, outline=INK, width=sw(2.5))
+    # body and star
+    circle(60, 68, 36, RED, INK, sw(4))
+    star = [(60.0,85.5),(62.5,91.6),(69.0,92.1),(64.0,96.3),(65.6,102.7),(60.0,99.2),(54.4,102.7),(56.0,96.3),(51.0,92.1),(57.5,91.6)]
+    draw.polygon([P(*p) for p in star], fill=SUN, outline=INK, width=sw(2.5))
 
     # eyes
-    for cx in (49, 71):
-        draw.ellipse([P(cx - 8, 54), P(cx + 8, 70)], fill=WHITE, outline=INK, width=sw(3))
-    for cx in (50, 72):
-        draw.ellipse([P(cx - 4, 59), P(cx + 4, 67)], fill=INK)
+    for cx in (46, 74):
+        circle(cx, 66, 8, WHITE, INK, sw(3))
+    for cx in (47, 75):
+        circle(cx, 67, 4, INK)
 
-    # smile: M49 78 Q60 88 71 78
-    smile = quad((49, 78), (60, 88), (71, 78))
+    # mouth: Q60 96 curve from (51,88) to (69,88)
+    smile = quad((51, 81), (60, 89), (69, 81))
     draw.line([P(*p) for p in smile], fill=INK, width=sw(4), joint="curve")
-    for x, y in ((49, 78), (71, 78)):  # round caps
+    for x, y in ((51, 81), (69, 81)):
         r = sw(2)
-        draw.ellipse([P(x, y)[0] - r, P(x, y)[1] - r, P(x, y)[0] + r, P(x, y)[1] + r], fill=INK)
+        cx, cy = P(x, y)
+        draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=INK)
 
     # cheeks
-    for cx in (37, 83):
-        draw.ellipse([P(cx - 4.5, 69.5), P(cx + 4.5, 78.5)], fill=PINK)
+    circle(36, 76, 4, PINK_CHEEK)
+    circle(84, 76, 4, PINK_CHEEK)
+
+    # nón lá: cone + ribs + chin strap
+    cone = quad((14, 46), (60, 58), (106, 46)) + quad((106, 46), (90, 30), (60, 8)) + quad((60, 8), (30, 30), (14, 46))
+    draw.polygon([P(*p) for p in cone], fill=STRAW, outline=INK, width=sw(4))
+    draw.line([P(60, 9), P(60, 54)], fill=RIB, width=sw(2.5))
+    for rib in (quad((42, 16), (36, 34), (26, 47)), quad((78, 16), (84, 34), (94, 47))):
+        draw.line([P(*p) for p in rib], fill=RIB, width=sw(2.5), joint="curve")
 
 
 def text(draw, xy, s, size, fill, anchor="la"):
@@ -105,15 +122,15 @@ def main():
         d.text((S(x + 20), S(511)), label, font=font, fill=INK, anchor="lm")
         x += w + 26
 
-    # comic panel with the Genie
+    # comic panel with the Sao
     px0, py0, px1, py1 = 700, 70, 1130, 560
     d.rounded_rectangle([S(px0 + 12), S(py0 + 12), S(px1 + 12), S(py1 + 12)], radius=S(36), fill=INK)
     d.rounded_rectangle([S(px0), S(py0), S(px1), S(py1)], radius=S(36), fill=PAPER, outline=INK, width=S(8))
-    # sun burst behind the genie (flat shapes, no gradient)
+    # sun burst behind Sao (flat shapes, no gradient)
     cx, cy = (px0 + px1) / 2, 300
     d.ellipse([S(cx - 150), S(cy - 150), S(cx + 150), S(cy + 150)], fill=SUN, outline=INK, width=S(6))
-    k = 3.1
-    genie(d, cx - 60 * k, cy - 60 * k, k)
+    k = 3.0
+    sao(d, cx - 60 * k, cy - 60 * k, k)
 
     img = img.resize((W, H), Image.LANCZOS)
     OUT.parent.mkdir(parents=True, exist_ok=True)

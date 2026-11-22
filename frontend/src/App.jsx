@@ -134,7 +134,7 @@ function Workspace({ username, onLogout }) {
       <header>
         <div className="brand">
           <Mascot size={44} />
-          <h1 className="display">Luyện nói với Genie</h1>
+          <h1 className="display">Luyện nói với Sao</h1>
         </div>
         <nav className="tabs">
           <button type="button" className={tab === 'chat' ? 'tab active' : 'tab'} onClick={() => setTab('chat')}>Trò chuyện</button>
@@ -188,8 +188,8 @@ function Workspace({ username, onLogout }) {
             <h2>AI</h2>
             <p className="muted">
               {config === null ? 'Đang kiểm tra...' : config.ai_enabled
-                ? 'Genie đang chấm lỗi ngữ pháp và phát âm cho bạn.'
-                : 'Genie đang hỏi theo kịch bản, chưa chấm lỗi.'}
+                ? 'Sao đang chấm lỗi ngữ pháp và phát âm cho bạn.'
+                : 'Sao đang hỏi theo kịch bản, chưa chấm lỗi.'}
             </p>
           </section>
         </aside>

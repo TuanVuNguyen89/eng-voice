@@ -78,7 +78,7 @@ export default function DrillView({ voiceName, rate }) {
         <Mascot mood={mood} size={84} />
         <div>
           <h2 className="display">Luyện sửa lỗi</h2>
-          <p className="muted">Nói lại đúng, rồi để Genie chấm. Lỗi được gom từ chính các cuộc trò chuyện của bạn.</p>
+          <p className="muted">Nói lại đúng, rồi để Sao chấm. Lỗi được gom từ chính các cuộc trò chuyện của bạn.</p>
         </div>
       </div>
 
@@ -103,7 +103,7 @@ export default function DrillView({ voiceName, rate }) {
       {empty && (
         <div className="empty">
           <p className="display">Chưa có lỗi nào để luyện.</p>
-          <p className="muted">Hãy trò chuyện với Genie vài lượt. Các câu bạn nói sai sẽ tự xuất hiện ở đây.</p>
+          <p className="muted">Hãy trò chuyện với Sao vài lượt. Các câu bạn nói sai sẽ tự xuất hiện ở đây.</p>
         </div>
       )}
 
