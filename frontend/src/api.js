@@ -45,6 +45,7 @@ export const login = () => request('/auth/login', { method: 'POST' });
 
 export const getConfig = () => request('/config');
 export const getTopics = () => request('/topics');
+export const getDrills = () => request('/drills');
 export const listSessions = () => request('/sessions');
 export const createSession = (topicId) =>
   request('/sessions', { method: 'POST', headers: JSON_HEADERS, body: JSON.stringify({ topic_id: topicId }) });

@@ -3,6 +3,7 @@ import { getSession, postTurn } from '../api';
 import { createTurnListener, hasRecognition, speak, stopSpeaking } from '../speech';
 import AudioClip from './AudioClip';
 import Feedback from './Feedback';
+import Mascot from './Mascot';
 
 const STATUS_TEXT = {
   idle: 'Nhấn 🎤 để bắt đầu nói.',
@@ -228,6 +229,12 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
 
   return (
     <div className="chat">
+      <div className="chat-head">
+        <Mascot mood={phase} size={76} />
+        <div className={`bubble-status ${error ? 'err' : ''}`} aria-live="polite">
+          {error || STATUS_TEXT[phase]}
+        </div>
+      </div>
       <div className="log" ref={logRef} aria-live="polite">
         {messages.map((m) => (
           <div key={m.id} className={`msg-row ${m.role}`}>
@@ -256,8 +263,6 @@ export default function ChatView({ sessionId, fresh, voiceName, rate, autoListen
           <div className="msg-row assistant"><div className="msg assistant typing"><p>…</p></div></div>
         )}
       </div>
-
-      <div className={`status ${error ? 'err' : ''}`}>{error || STATUS_TEXT[phase]}</div>
 
       <div className="controls">
         <button

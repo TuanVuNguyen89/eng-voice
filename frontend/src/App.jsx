@@ -5,6 +5,8 @@ import AuthView from './components/AuthView';
 import ChatView from './components/ChatView';
 import PracticeView from './components/PracticeView';
 import HistoryView from './components/HistoryView';
+import DrillView from './components/DrillView';
+import Mascot from './components/Mascot';
 
 const AUTH_KEY = 'speakbot.auth';
 const PREFS_KEY = 'speakbot.prefs.v2';
@@ -130,10 +132,14 @@ function Workspace({ username, onLogout }) {
   return (
     <div className="app">
       <header>
-        <h1>🎙️ Luyện nói tiếng Anh</h1>
+        <div className="brand">
+          <Mascot size={44} />
+          <h1 className="display">Luyện nói với Bo</h1>
+        </div>
         <nav className="tabs">
           <button type="button" className={tab === 'chat' ? 'tab active' : 'tab'} onClick={() => setTab('chat')}>Trò chuyện</button>
           <button type="button" className={tab === 'practice' ? 'tab active' : 'tab'} onClick={() => setTab('practice')}>Luyện câu</button>
+          <button type="button" className={tab === 'drill' ? 'tab active' : 'tab'} onClick={() => setTab('drill')}>Sửa lỗi</button>
           <button type="button" className={tab === 'history' ? 'tab active' : 'tab'} onClick={() => setTab('history')}>Lịch sử</button>
         </nav>
         <div className="account">
@@ -182,8 +188,8 @@ function Workspace({ username, onLogout }) {
             <h2>AI</h2>
             <p className="muted">
               {config === null ? 'Đang kiểm tra...' : config.ai_enabled
-                ? `Đang dùng ${config.model}. Bot chấm lỗi và phát âm.`
-                : 'Server chưa có API key: bot hỏi theo kịch bản, không chấm lỗi.'}
+                ? 'Bo đang chấm lỗi ngữ pháp và phát âm cho bạn.'
+                : 'Bo đang hỏi theo kịch bản, chưa chấm lỗi.'}
             </p>
           </section>
         </aside>
@@ -219,6 +225,10 @@ function Workspace({ username, onLogout }) {
               voiceName={prefs.voiceName}
               rate={prefs.rate}
             />
+          )}
+
+          {tab === 'drill' && (
+            <DrillView voiceName={prefs.voiceName} rate={prefs.rate} />
           )}
 
           {tab === 'history' && (

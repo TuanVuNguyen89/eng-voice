@@ -104,7 +104,39 @@ def login(user: User = Depends(current_user)):
 
 @app.get("/api/config")
 def config(user: User = Depends(current_user)):
-    return {"ai_enabled": bool(settings.openai_api_key), "model": settings.openai_model}
+    # The model name is deliberately not exposed to the client.
+    return {"ai_enabled": bool(settings.openai_api_key)}
+
+
+@app.get("/api/drills")
+def drills(user: User = Depends(current_user), db: DBSession = Depends(get_db)):
+    """Corrections and pronunciation tips from this user's own past turns (newest first, de-duplicated)."""
+    rows = db.execute(
+        select(Message.feedback)
+        .join(Session, Message.session_id == Session.id)
+        .where(Session.user_id == user.id, Message.role == "user", Message.feedback.is_not(None))
+        .order_by(Message.created_at.desc())
+        .limit(300)
+    ).scalars().all()
+
+    sentences, words = [], []
+    seen_said, seen_word = set(), set()
+    for fb in rows:
+        if not isinstance(fb, dict):
+            continue
+        for c in fb.get("corrections") or []:
+            said = str(c.get("said") or "").strip()
+            better = str(c.get("better") or "").strip()
+            key = said.lower()
+            if said and better and key not in seen_said:
+                seen_said.add(key)
+                sentences.append({"said": said, "better": better, "why": str(c.get("why") or "")})
+        for t in fb.get("tips") or []:
+            word = str(t.get("word") or "").strip().lower()
+            if word and word not in seen_word:
+                seen_word.add(word)
+                words.append({"word": word, "tip": str(t.get("tip") or "")})
+    return {"sentences": sentences[:30], "words": words[:40]}
 
 
 @app.get("/api/topics")
