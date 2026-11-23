@@ -6,6 +6,8 @@ services:
       POSTGRES_DB: speak
       POSTGRES_USER: speak
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-speak_dev_pw}
+    ports:
+      - "127.0.0.1:5432:5432"   # PostgreSQL, dev only
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -25,11 +27,14 @@ services:
     volumes:
       - miniodata:/bitnami/minio/data
     ports:
-      - "9001:9001"   # MinIO web console (optional)
+      - "127.0.0.1:9000:9000"   # MinIO API (for running the backend on the host)
+      - "127.0.0.1:9001:9001"   # MinIO web console
 
   backend:
     build: ./backend
     restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"   # backend API, dev only
     depends_on:
       postgres:
         condition: service_healthy
